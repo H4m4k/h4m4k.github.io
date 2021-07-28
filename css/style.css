@@ -7,4 +7,37 @@
 body {
     background-color: black;
     color: white;
+    min-height: 100vh;
+    grid-template: 1.9fr .1fr / repeat(5,1fr);
+}
+
+header {
+    
+    grid-area: 1/1 / 3/2;
+}
+header > img {
+    width: 15vw;
+    margin: 0 auto;
+}
+div.red_Bg {
+    grid-template: repeat(6,1fr)/ 1fr;
+}
+
+footer {
+    grid-area: 2/1 / 3/-1;
+}
+
+.background {
+    background: url(/img/AmbientII.png) no-repeat;
+    grid-area: 1/1 / 3/6;
+    position: relative;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+.grid {
+    display: grid;
+}
+.red_Bg {
+    background-color: rgba(217,43,43,0.68);
 }
