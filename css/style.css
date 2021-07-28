@@ -8,20 +8,27 @@ body {
     background-color: black;
     color: white;
     min-height: 100vh;
-    grid-template: 1.9fr .1fr / repeat(5,1fr);
+    grid-template: 1.9fr .1fr / .8fr .05fr repeat(4,1fr);
 }
 
 header {
-    
     grid-area: 1/1 / 3/2;
 }
-header > img {
-    width: 15vw;
-    margin: 0 auto;
+header > div > img {
+    width: 10vw;
 }
+header >div:nth-child(1) {
+    background-color: white;
+    overflow: hidden;
+    place-self: center;
+    border-radius: 50%;
+    border: ridge 5px rgb(65, 65, 65);
+}
+
 div.red_Bg {
     grid-template: repeat(6,1fr)/ 1fr;
 }
+
 
 footer {
     grid-area: 2/1 / 3/-1;
@@ -35,9 +42,21 @@ footer {
     width: 100vw;
     height: 100vh;
 }
+.round_Border {
+    border-radius: 50%;
+}
+.header_Border {
+    background: white;
+    grid-area: 1/2 / -1/3;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(35,35,38,1) 9%, rgba(59,59,59,1) 89%, rgb(95, 95, 95) 100%);
+}
 .grid {
     display: grid;
 }
 .red_Bg {
     background-color: rgba(217,43,43,0.68);
+}
+.center {
+    place-self: center;
+    margin: 0 auto;
 }
