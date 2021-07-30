@@ -19,7 +19,7 @@ header {
     grid-template: .3fr .1fr .3fr auto / auto;
 }
 img[src*='Avatar.jpg'] {
-    width: 10vw;
+    width: 8vw;
 }
 div.red_Bg {
     grid-template: repeat(6,1fr)/ 1fr;
@@ -34,6 +34,11 @@ header >div:nth-child(1) {
 nav > ul > a {
     text-decoration: none;
     color:cornsilk;
+    padding: .5em 1em;
+    box-shadow: 5px 5px 15px #750505;
+    border-radius: 10%;
+    margin: 0.4em;
+    text-align: center;
 }
 nav > ul {
     display: flex;
