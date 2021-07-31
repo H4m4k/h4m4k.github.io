@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
     grid-template: 1.9fr .1fr / .7fr .05fr repeat(4,1fr);
     font-family: 'Play', sans-serif;
-    text-shadow: 1px 2px 10px black;
+    text-shadow: 1px 1px 15px black;
 }
 
 /* H E A D E R - nav and side bar */
@@ -45,11 +45,21 @@ nav > ul > a {
     text-align: center;
     background-color: rgb(179, 43, 43);
 
+    place-self: center;
+    width: 7em;
+
     font-size: smaller;
-    
+    transition: background-color 1s, width 1s;
     /* border: 1px solid cornsilk;
     border-right: none;
     border-left: none; */
+}
+nav > ul > a:hover {
+    background-color: grey;
+    color: rgb(179, 43, 43);
+    width: 8em;
+    text-shadow: 0 0 8px cornsilk;
+    font-weight: bolder;
 }
 nav > ul {
     display: flex;
