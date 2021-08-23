@@ -2,16 +2,17 @@ const about = document.querySelector('#about');
 const resume = document.querySelector('#resume')
 const portfolio = document.querySelector('#portfolio')
 
-const about_Path = document.querySelector('#about_Path')
-const resume_Path = document.querySelector('#resume_Path')
-const portfolio_Path = document.querySelector('#portfolio_Path')
+const about_Path = document.querySelector('.about_Path')
+const resume_Path = document.querySelector('.resume_Path')
+const portfolio_Path = document.querySelector('.portfolio_Path')
 
 
 about.onmouseover = function() {
         changeColor(about)
 }
 about.onmouseout =  function(event) {
-        about_Path.style.fill = '#FE5F55'
+        about_Path.style.stroke = '#333745'
+        about_Path.parentElement.classList.remove('on_Top')
         reset(event)
 }
 
@@ -20,7 +21,8 @@ resume.onmouseover = function() {
         changeColor(resume)
 }
 resume.onmouseout = function() {
-        resume_Path.style.fill = '#FE5F55'
+        resume_Path.style.stroke = '#333745'
+        resume_Path.parentElement.classList.remove('on_Top')
 }
 
 
@@ -28,7 +30,7 @@ portfolio.onmouseover = function() {
         changeColor(portfolio)
 }
 portfolio.onmouseout = function() {
-        portfolio_Path.style.fill = '#FE5F55'
+        portfolio_Path.style.stroke = '#333745'
 }
 
 
@@ -38,15 +40,17 @@ function changeColor(param) {
         switch(param) {
 
                 case about:
-                        about_Path.style.fill = '#d2e59f'
+                        about_Path.style.stroke = '#d2e59f'
+                        about_Path.parentElement.classList.add('on_Top')
                         break;
 
                 case resume:
-                        resume_Path.style.fill = '#e42558'
+                        resume_Path.style.stroke = '#e42558'
+                        resume_Path.parentElement.classList.add('on_Top')
                         break;
 
                 case portfolio:
-                        portfolio_Path.style.fill = '#80db92'
+                        portfolio_Path.style.stroke = '#80db92'
                         break;
         }
 
