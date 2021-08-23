@@ -23,10 +23,17 @@
 
    <div class="circle">
      <svg 
+     class="off"
      viewBox="-5 0 110   110"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
-      <circle class="about_Path" cx="50" cy="50" r="47" fill="none" stroke="#333745" stroke-width="3"></circle>
+     <defs >
+       <clipPath id="clip">
+         <circle  cx="50" cy="50" r="47" fill="none"></circle>
+        </clipPath>
+      </defs>
+      <image xlink:href="/img/Avatar_Large.jpg" width="100%" height="100%" x="-10" y="-5" clip-path="url(#clip)" />
+      <circle  class="about_Path" cx="50" cy="50" r="47" fill="none" stroke="#333745" stroke-width="3"></circle>
      Sorry, your browser does not support inline SVG.
     </svg>
   </div> 
@@ -52,12 +59,6 @@
   </div> 
 
 
-
-  
-  
-
-
-  
 
     
       <nav>
