@@ -28,11 +28,11 @@
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
      <defs >
-       <clipPath id="clip">
+       <clipPath id="clip_Circle">
          <circle  cx="50" cy="50" r="47" fill="none"></circle>
         </clipPath>
       </defs>
-      <image xlink:href="/img/Avatar_Large.jpg" width="100%" height="100%" x="-10" y="-5" clip-path="url(#clip)" />
+      <image xlink:href="/img/Avatar_Large.jpg" width="100%" height="100%" x="-10" y="-5" clip-path="url(#clip_Circle)" />
       <circle  class="about_Path" cx="50" cy="50" r="47" fill="none" stroke="#333745" stroke-width="3"></circle>
      Sorry, your browser does not support inline SVG.
     </svg>
@@ -40,20 +40,34 @@
 
    <div class="triangle">
      <svg 
+     class="off"
      viewBox="-5 0 110   110"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
-      <polygon class="resume_Path" points="50,5 0,100 100,100" fill="none" stroke="#333745" stroke-width="3"/>
+     <defs>
+       <clipPath id="clip_Triangle">
+        <polygon points="50,5 0,100 100,100" fill="none"/>
+       </clipPath>
+     </defs>
+     
+    <polygon class="resume_Path" points="50,5 0,100 100,100" fill="none" stroke="#333745" stroke-width="3"/>
      Sorry, your browser does not support inline SVG.
     </svg>
   </div> 
 
    <div class="square">
      <svg 
+     class="off"
      viewBox="-5 -5 110   110"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
-       <rect class="portfolio_Path" width="100" height="100" fill="none" stroke="#333745" stroke-width="3"></rect>
+     <defs>
+       <clipPath id="clip_Square">
+        <rect width="100" height="100" fill="none"></rect>
+       </clipPath>
+     </defs>
+     <image xlink:href="/img/resume.jpg" width="auto" height="110%" x='-35' y='-5' clip-path="url(#clip_Square)"></image>
+      <rect class="portfolio_Path" width="100" height="100" fill="none" stroke="#333745" stroke-width="3"></rect>
      Sorry, your browser does not support inline SVG.
     </svg>
   </div> 

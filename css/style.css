@@ -39,15 +39,15 @@ nav > a {
     place-self: center;
 }
 nav > a#about:hover{
-    color: #D2E59F;
+    color: #9BC035;
     scale: 1.2;
     transition: (2s);
 }
 nav > a#resume:hover{
-    color: #E42558;
+    color: #A3143A;
 }
 nav > a#portfolio:hover{
-    color: #80DB92;
+    color: #1F702F;
 }
 
 

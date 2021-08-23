@@ -40,6 +40,8 @@ portfolio.onmouseover = function() {
 }
 portfolio.onmouseout = function() {
         portfolio_Path.style.stroke = '#333745'
+        portfolio_Path.parentElement.classList.add('off')
+        portfolio_Path.parentElement.classList.remove('on_Top')
 }
 
 
@@ -49,19 +51,21 @@ function changeColor(param) {
         switch(param) {
 
                 case about:
-                        about_Path.style.stroke = '#d2e59f'
+                        about_Path.style.stroke = '#9BC035'
                         about_Path.parentElement.classList.add('on_Top')
                         about_Path.parentElement.classList.remove('off')
                         break;
 
                 case resume:
-                        resume_Path.style.stroke = '#e42558'
+                        resume_Path.style.stroke = '#A3143A'
                         resume_Path.parentElement.classList.add('on_Top')
                         resume_Path.parentElement.classList.remove('off')
                         break;
 
                 case portfolio:
-                        portfolio_Path.style.stroke = '#80db92'
+                        portfolio_Path.style.stroke = '#1F702F'
+                        portfolio_Path.parentElement.classList.add('on_Top')
+                        portfolio_Path.parentElement.classList.remove('off')
                         break;
         }
 
