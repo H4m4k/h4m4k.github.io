@@ -35,19 +35,20 @@ nav > a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
-
+    transition: scale .4s;
     place-self: center;
 }
 nav > a#about:hover{
     color: #9BC035;
     scale: 1.2;
-    transition: (2s);
 }
 nav > a#resume:hover{
     color: #A3143A;
+    scale: 1.2;
 }
 nav > a#portfolio:hover{
     color: #1F702F;
+    scale: 1.2;
 }
 
 
@@ -85,4 +86,7 @@ footer {}
     position: relative;
     z-index: 1;
 }
-
+.nav__background {
+    grid-area: 1/1 / 7/2;
+    background-color: #23252F;
+}
