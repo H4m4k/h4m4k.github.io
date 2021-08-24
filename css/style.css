@@ -47,7 +47,7 @@ nav > a#resume:hover{
     scale: 1.2;
 }
 nav > a#portfolio:hover{
-    color: #1F702F;
+    color: #4FCF68;
     scale: 1.2;
 }
 
@@ -89,4 +89,9 @@ footer {}
 .nav__background {
     grid-area: 1/1 / 7/2;
     background-color: #23252F;
+}
+.h4 {
+    grid-area: 1/1/2/2;
+    position: relative;
+    place-self: center;
 }

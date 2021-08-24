@@ -63,7 +63,7 @@ function changeColor(param) {
                         break;
 
                 case portfolio:
-                        portfolio_Path.style.stroke = '#1F702F'
+                        portfolio_Path.style.stroke = '#4FCF68'
                         portfolio_Path.parentElement.classList.add('on_Top')
                         portfolio_Path.parentElement.classList.remove('off')
                         break;
