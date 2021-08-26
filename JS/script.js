@@ -6,22 +6,31 @@ const about_Path = document.querySelector('.about_Path')
 const resume_Path = document.querySelector('.resume_Path')
 const portfolio_Path = document.querySelector('.portfolio_Path')
 
+const welcome = document.querySelector('.hello')
+const iam = document.querySelector('.iam')
+const name = document.querySelector('.name')
+const front = document.querySelector('.front')
+const dev = document.querySelector('.dev')
 
-const TEST = {
-        about: about_Path,
-        resume: resume_Path,
-        portfolio: portfolio_Path
-}
 
-
-about.onmouseover = function() {
+about.onmouseover = function(event) {
         changeColor(about)
+        welcome.classList.add('welcome__greeting--top')
+        iam.classList.add('welcome__greeting--left')
+        name.classList.add('welcome__greeting--right')
+        front.classList.add('welcome__greeting--bottom--left')
+        dev.classList.add('welcome__greeting--bottom--right')
 }
 about.onmouseout =  function(event) {
         about_Path.style.stroke = '#333745'
         about_Path.parentElement.classList.add('off')
         about_Path.parentElement.classList.remove('on_Top')
-        reset(event)
+
+        welcome.classList.remove('welcome__greeting--top')
+        iam.classList.remove('welcome__greeting--left')
+        name.classList.remove('welcome__greeting--right')
+        front.classList.remove('welcome__greeting--bottom--left')
+        dev.classList.remove('welcome__greeting--bottom--right')
 }
 
 
@@ -73,13 +82,4 @@ function changeColor(param) {
 }
 
 
-
-function reset(event) {
-        switch(event.target.getAttribute('id')) {
-                case about:
-
-        }
-      console.log(typeof test) 
-        return 0;
-}
 

@@ -6,10 +6,10 @@
 
 body {
     background-color: #333745;
-    grid-template: 1fr repeat( 3,.25fr) 1fr .1fr / .5fr 1fr 1fr;
+    grid-template: 1fr repeat( 3,.25fr) 1fr .1fr / .3fr 1fr 1fr;
     min-height: 100vh;
     font-family: 'Play', sans-serif;
-    color: #FE5F55;
+    color: #FE2F20;;
     
 }
 body > div{
@@ -28,15 +28,19 @@ nav {
     grid-template: repeat(3,1fr) / 1fr;
     width: 100%;
     
-    font-size: 2em;
+    font-size: 1.4em;
     font-weight: bolder;
+
+    place-items: end;
+    justify-items: center;
+
+    color: #fe0000;
 }
 nav > a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
-    transition: scale .4s;
-    place-self: center;
+    transition: scale .4s, color .4s;
 }
 nav > a#about:hover{
     color: #9BC035;
@@ -90,8 +94,55 @@ footer {}
     grid-area: 1/1 / 7/2;
     background-color: #23252F;
 }
-.h4 {
+.logo {
     grid-area: 1/1/2/2;
     position: relative;
     place-self: center;
+}
+.welcome {
+    grid-area: 2/2 / 2/4;
+    place-self: center;
+    color: #DCDEE5;
+    text-align: center;
+   
+}
+.welcome__greeting {
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 5px;
+    transition: all 1s .2s;
+}
+.welcome__job {
+    font-size: 2em;
+    transition: all 1s .2s;
+}
+.welcome__job--inline {
+    display: inline-block;
+    padding: 0 .1em 0 0;
+}
+.welcome__greeting--inline {
+    display: inline-block;
+    padding: 0 1em 0 0;
+}
+.welcome__greeting--top {
+    transform: translateY(-100%);
+}
+.welcome__greeting--left {
+    transform: translate(-90%,45%);
+}
+.welcome__greeting--right {
+    transform: translate(100%,-45%);
+}
+.welcome__greeting--bottom--left {
+    transform: translate(-50%,300%);
+}
+.welcome__greeting--bottom--right {
+    transform: translate(50%,300%);
+}
+img {
+    grid-area: 5/1/6/2;
+    width: 30%;
+    place-self: end;
+    justify-self: end;
+    justify-self: center;
 }
