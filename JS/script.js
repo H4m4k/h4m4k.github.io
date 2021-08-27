@@ -12,73 +12,143 @@ const name = document.querySelector('.name')
 const front = document.querySelector('.front')
 const dev = document.querySelector('.dev')
 
+const paragraph = document.querySelectorAll('p')
 
-about.onmouseover = function(event) {
-        changeColor(about)
-        welcome.classList.add('welcome__greeting--top')
-        iam.classList.add('welcome__greeting--left')
-        name.classList.add('welcome__greeting--right')
-        front.classList.add('welcome__greeting--bottom--left')
-        dev.classList.add('welcome__greeting--bottom--right')
+const manager = {
+        about: about_Path,
+        resume: resume_Path,
+        portfolio: portfolio_Path
 }
-about.onmouseout =  function(event) {
-        about_Path.style.stroke = '#333745'
-        about_Path.parentElement.classList.add('off')
-        about_Path.parentElement.classList.remove('on_Top')
 
-        welcome.classList.remove('welcome__greeting--top')
-        iam.classList.remove('welcome__greeting--left')
-        name.classList.remove('welcome__greeting--right')
-        front.classList.remove('welcome__greeting--bottom--left')
-        dev.classList.remove('welcome__greeting--bottom--right')
+
+
+about.onmouseover = function() {
+        shapeManager('about')
+        spread('circle_on')
+}
+about.onmouseout =  function() {
+        shapeManager('about_off')
+        spread('circle_off')
+        
 }
 
 
 resume.onmouseover = function() {
-        changeColor(resume)
+        shapeManager('resume')
+        spread('triangle_on')
 }
 resume.onmouseout = function() {
-        resume_Path.style.stroke = '#333745'
-        resume_Path.parentElement.classList.add('off')
-        resume_Path.parentElement.classList.remove('on_Top')
+        shapeManager('resume_off')
+        spread('triangle_off')
 }
 
 
 portfolio.onmouseover = function() {
-        changeColor(portfolio)
+        shapeManager('portfolio')
+        spread('square_on')
 }
 portfolio.onmouseout = function() {
-        portfolio_Path.style.stroke = '#333745'
-        portfolio_Path.parentElement.classList.add('off')
-        portfolio_Path.parentElement.classList.remove('on_Top')
+        shapeManager('portfolio_off')
+        spread('square_off')
 }
 
 
 
 
-function changeColor(param) {
+function shapeManager(param) {
         switch(param) {
 
-                case about:
-                        about_Path.style.stroke = '#9BC035'
-                        about_Path.parentElement.classList.add('on_Top')
-                        about_Path.parentElement.classList.remove('off')
+                case 'about':
+                        manager['about'].style.stroke = '#9BC035'
+                        manager['about'].parentElement.classList.add('on_Top')
+                        manager['about'].parentElement.classList.remove('off')
                         break;
 
-                case resume:
-                        resume_Path.style.stroke = '#A3143A'
-                        resume_Path.parentElement.classList.add('on_Top')
-                        resume_Path.parentElement.classList.remove('off')
+                case 'resume':
+                        manager['resume'].style.stroke = '#A3143A'
+                        manager['resume'].parentElement.classList.add('on_Top')
+                        manager['resume'].parentElement.classList.remove('off')
                         break;
 
-                case portfolio:
-                        portfolio_Path.style.stroke = '#4FCF68'
-                        portfolio_Path.parentElement.classList.add('on_Top')
-                        portfolio_Path.parentElement.classList.remove('off')
+                case 'portfolio':
+                        manager['portfolio'].style.stroke = '#4FCF68'
+                        manager['portfolio'].parentElement.classList.add('on_Top')
+                        manager['portfolio'].parentElement.classList.remove('off')
                         break;
+
+                case 'about_off':
+                        manager['about'].style.stroke = '#333745'
+                        manager['about'].parentElement.classList.add('off')
+                        manager['about'].parentElement.classList.remove('on_Top')
+                        break;
+
+                case 'resume_off':
+                        manager['resume'].style.stroke = '#333745'
+                        manager['resume'].parentElement.classList.add('off')
+                        manager['resume'].parentElement.classList.remove('on_Top')
+                        break;
+                
+                case 'portfolio_off':
+                        manager['portfolio'].style.stroke = '#333745'
+                        manager['portfolio'].parentElement.classList.add('off')
+                        manager['portfolio'].parentElement.classList.remove('on_Top')
+                        
         }
+  return 0;
+}
 
+function spread(param) {
+        switch(param) {
+                case 'circle_on':
+                        welcome.classList.add('welcome__greet--circle--top')
+                        iam.classList.add('welcome__greet--circle--left')
+                        name.classList.add('welcome__greet--circle--right')
+                        front.classList.add('welcome__greet--circle--bottom--left')
+                        dev.classList.add('welcome__greet--circle--bottom--right')
+                        break;
+
+                case 'circle_off':
+                        welcome.classList.remove('welcome__greet--circle--top')
+                        iam.classList.remove('welcome__greet--circle--left')
+                        name.classList.remove('welcome__greet--circle--right')
+                        front.classList.remove('welcome__greet--circle--bottom--left')
+                        dev.classList.remove('welcome__greet--circle--bottom--right')
+                        break;
+
+                case 'triangle_on':
+                        welcome.classList.add('welcome__greet--triangle--left')
+                        iam.classList.add('welcome__greet--triangle--right')
+                        name.classList.add('welcome__greet--triangle--visible--none')
+                        front.classList.add('welcome__greet--triangle--bottom')
+                        dev.classList.add('welcome__greet--triangle--bottom')
+                        break;
+
+                case 'triangle_off':
+                        name.classList.remove('welcome__greet--triangle--visible--none')
+                        welcome.classList.remove('welcome__greet--triangle--left')
+                        iam.classList.remove('welcome__greet--triangle--right')
+                        front.classList.remove('welcome__greet--triangle--bottom')
+                        dev.classList.remove('welcome__greet--triangle--bottom')
+                        break;
+
+                case 'square_on':
+                        welcome.classList.add('welcome__greet--triangle--visible--none')
+                        iam.classList.add('welcome__greet--triangle--visible--none')
+                        name.classList.add('welcome__greet--square--top')
+                        front.classList.add('welcome__greet--square--bottom')
+                        dev.classList.add('welcome__greet--square--bottom')
+                        break;
+
+                case 'square_off':
+                        welcome.classList.remove('welcome__greet--triangle--visible--none')
+                        iam.classList.remove('welcome__greet--triangle--visible--none')
+                        name.classList.remove('welcome__greet--square--top')
+                        front.classList.remove('welcome__greet--square--bottom')
+                        dev.classList.remove('welcome__greet--square--bottom')
+                        break;
+                }
         return 0;
+
 }
 
 
