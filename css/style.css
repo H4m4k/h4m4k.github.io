@@ -9,7 +9,6 @@ body {
     grid-template: 1fr repeat( 3,.25fr) 1fr .1fr / .3fr 1fr 1fr;
     min-height: 100vh;
     font-family: 'Play', sans-serif;
-    color: #FE2F20;;
     
 }
 body > div{
@@ -34,7 +33,7 @@ nav {
     place-items: end;
     justify-items: center;
 
-    color: #fe0000;
+    color: #A1A7BA;
 }
 nav > a {
     text-decoration: none;
@@ -90,6 +89,10 @@ footer {}
     position: relative;
     z-index: 1;
 }
+.link__letter {
+    color:#B70D01 ;
+}
+
 .nav__background {
     grid-area: 1/1 / 7/2;
     background-color: #23252F;
@@ -106,43 +109,73 @@ footer {}
     text-align: center;
    
 }
-.welcome__greeting {
+.welcome__div {
+    display: grid;
+    grid-template: repeat(5,min-content)/repeat(2,1fr);
+}
+.welcome__greet.hello {
+    grid-area: 1/1 / 3/3;
+}
+.welcome__greet {
     font-size: 4em;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     transition: all 1s .2s;
 }
 .welcome__job {
     font-size: 2em;
-    transition: all 1s .2s;
+    font-style: italic;
+    margin: .5em 0 0 0;
+    transition: transform 1s .2s;
 }
-.welcome__job--inline {
-    display: inline-block;
-    padding: 0 .1em 0 0;
+
+
+
+.welcome__greet--circle--top {
+    transform: translateY(-1em);
 }
-.welcome__greeting--inline {
-    display: inline-block;
-    padding: 0 1em 0 0;
+.welcome__greet--circle--left {
+    transform: translate(-2em);
 }
-.welcome__greeting--top {
-    transform: translateY(-100%);
+.welcome__greet--circle--right {
+    transform: translate(2.5em);
 }
-.welcome__greeting--left {
-    transform: translate(-90%,45%);
+.welcome__greet--circle--bottom--left {
+    transform: translate(-1em,4em);
 }
-.welcome__greeting--right {
-    transform: translate(100%,-45%);
+.welcome__greet--circle--bottom--right {
+    transform: translate(1em,4em);
 }
-.welcome__greeting--bottom--left {
-    transform: translate(-50%,300%);
-}
-.welcome__greeting--bottom--right {
-    transform: translate(50%,300%);
-}
-img {
+
+.skills {
     grid-area: 5/1/6/2;
-    width: 30%;
+    width: 40%;
     place-self: end;
     justify-self: end;
     justify-self: center;
+}
+
+
+.welcome__greet--triangle--left {
+    transform: translate(-3em,2.15em);
+  }
+  
+.welcome__greet--triangle--right {
+    transform: translate(4.5em,1em);
+  } 
+.welcome__greet--triangle--visible--none {
+    opacity: 0;
+  } 
+  
+.welcome__greet--triangle--bottom {
+    transform: translateY(4.5em);
+  }
+
+
+
+.welcome__greet--square--top {
+    transform: translate(-1.6em,-2em);
+}  
+.welcome__greet--square--bottom {
+    transform:translateY(5em)
 }
