@@ -89,9 +89,7 @@ footer {}
     position: relative;
     z-index: 1;
 }
-.link__letter {
-    color:#B70D01 ;
-}
+
 
 .nav__background {
     grid-area: 1/1 / 7/2;
@@ -105,7 +103,7 @@ footer {}
 .welcome {
     grid-area: 2/2 / 2/4;
     place-self: center;
-    color: #DCDEE5;
+    color: #DF1001;
     text-align: center;
    
 }
