@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #333745;
+    background-color: #142142;
     grid-template: 1fr repeat( 3,.25fr) 1fr .1fr / .3fr 1fr 1fr;
     min-height: 100vh;
     font-family: 'Play', sans-serif;
@@ -33,7 +33,7 @@ nav {
     place-items: end;
     justify-items: center;
 
-    color: #A1A7BA;
+    color: #142142;
 }
 nav > a {
     text-decoration: none;
@@ -42,15 +42,15 @@ nav > a {
     transition: scale .4s, color .4s;
 }
 nav > a#about:hover{
-    color: #9BC035;
+    color: #568BFC;
     scale: 1.2;
 }
 nav > a#resume:hover{
-    color: #A3143A;
+    color: #782323;
     scale: 1.2;
 }
 nav > a#portfolio:hover{
-    color: #4FCF68;
+    color: #405C7D;
     scale: 1.2;
 }
 
@@ -93,7 +93,7 @@ footer {}
 
 .nav__background {
     grid-area: 1/1 / 7/2;
-    background-color: #23252F;
+    background-color: #bac7d6;
 }
 .logo {
     grid-area: 1/1/2/2;
@@ -103,7 +103,7 @@ footer {}
 .welcome {
     grid-area: 2/2 / 2/4;
     place-self: center;
-    color: #DF1001;
+    color: #f1a403;
     text-align: center;
    
 }

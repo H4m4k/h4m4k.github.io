@@ -59,19 +59,19 @@ function shapeManager(param) {
         switch(param) {
 
                 case 'about':
-                        manager['about'].style.stroke = '#9BC035'
+                        manager['about'].style.stroke = '#568BFC'
                         manager['about'].parentElement.classList.add('on_Top')
                         manager['about'].parentElement.classList.remove('off')
                         break;
 
                 case 'resume':
-                        manager['resume'].style.stroke = '#A3143A'
+                        manager['resume'].style.stroke = '#782323'
                         manager['resume'].parentElement.classList.add('on_Top')
                         manager['resume'].parentElement.classList.remove('off')
                         break;
 
                 case 'portfolio':
-                        manager['portfolio'].style.stroke = '#4FCF68'
+                        manager['portfolio'].style.stroke = '#405C7D'
                         manager['portfolio'].parentElement.classList.add('on_Top')
                         manager['portfolio'].parentElement.classList.remove('off')
                         break;
