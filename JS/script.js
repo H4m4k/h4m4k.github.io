@@ -59,7 +59,7 @@ function shapeManager(param) {
         switch(param) {
 
                 case 'about':
-                        manager['about'].style.stroke = '#568BFC'
+                        manager['about'].style.stroke = '#99ACC2'
                         manager['about'].parentElement.classList.add('on_Top')
                         manager['about'].parentElement.classList.remove('off')
                         break;

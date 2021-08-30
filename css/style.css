@@ -6,7 +6,7 @@
 
 body {
     background-color: #142142;
-    grid-template: 1fr repeat( 3,.25fr) 1fr .1fr / .3fr 1fr 1fr;
+    grid-template: 1fr repeat( 3,.25fr) 1fr .15fr / .3fr 1fr 1fr;
     min-height: 100vh;
     font-family: 'Play', sans-serif;
     
@@ -42,8 +42,12 @@ nav > a {
     transition: scale .4s, color .4s;
 }
 nav > a#about:hover{
-    color: #568BFC;
+    color: #99ACC2;
     scale: 1.2;
+    background-color: #142142;
+    scale: 1.2;
+    padding: .2em;
+    border-radius: .3em;
 }
 nav > a#resume:hover{
     color: #782323;
@@ -134,7 +138,6 @@ main {}
     place-self: center;
     color: #f1a403;
     text-align: center;
-   
 }
 .welcome__div {
     display: grid;
@@ -147,13 +150,16 @@ main {}
     font-size: 4em;
     font-weight: bold;
     letter-spacing: 4px;
-    transition: all 1s .2s;
 }
 .welcome__job {
     font-size: 2em;
     font-style: italic;
     margin: .5em 0 0 0;
     transition: transform 1s .2s;
+}
+
+.animate {
+    transition: transform 1s .2s, opacity 1s;
 }
 
 
@@ -197,6 +203,9 @@ main {}
 .welcome__greet--triangle--bottom {
     transform: translateY(18vh);
   }
+  .triangle__img--sharpen {
+      image-rendering: -webkit-optimize-contrast;
+  }
 
 
 
@@ -206,7 +215,6 @@ main {}
 .welcome__greet--square--bottom {
     transform:translateY(20vh)
 }
-
 .square__img--invert {
     filter: brightness(40%) sepia(100%);
 }
