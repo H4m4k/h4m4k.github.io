@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Paweł Janik - Web developer portoflio</title>
+	<title>Paweł Janik - FrontEnd developer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
   
   <link rel="icon" href="/img/favicon.png">
 	<link rel="stylesheet" href="css/style.css">
-
+  <script src="https://kit.fontawesome.com/a28ed5be3d.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -27,15 +27,16 @@
    viewBox="0 0 20 39.875"
    class="logo">
   <g id='H4__logo' transform="translate(-84.074 -112.42)">
-    <path
-       transform="scale(.26458)"
-       d="m317.76 424.89v79.117l62.362-2e-3v71.594h13.228v-83.008h-62.362v-67.701zm62.362 0v56.692l13.228 1e-3v-56.693zm-62.362 90.708v60.001h13.228v-60.001z"
-       fill="#f1a403"
-       stroke-width="1"
-       stroke="#142142"
-       style="paint-order:fill markers stroke"
-       />
-       
+    <a href="#">
+      <path
+      transform="scale(.26458)"
+      d="m317.76 424.89v79.117l62.362-2e-3v71.594h13.228v-83.008h-62.362v-67.701zm62.362 0v56.692l13.228 1e-3v-56.693zm-62.362 90.708v60.001h13.228v-60.001z"
+      fill="#f1a403"
+      stroke-width="1"
+      stroke="#142142"
+      style="paint-order:fill markers stroke"
+      />
+    </a>   
   </g>
 </svg>
 
@@ -86,9 +87,9 @@
         <rect width="100" height="100" fill="none"></rect>
        </clipPath>
      </defs>
-     <image xlink:href="/img/resume.jpg" width="auto" height="110%" x='-35' y='-5' clip-path="url(#clip_Square)"></image>
+     <image class='square__img--invert' xlink:href="/img/resume.jpg" width="auto" height="110%" x='-35' y='-5' clip-path="url(#clip_Square)"></image>
       <rect class="portfolio_Path" width="100" height="100" fill="none" stroke="#333745" stroke-width="3"></rect>
-      <text x="50" y="90" font-size="10" font-weight="bold" text-anchor="middle" fill="#405C7D" stroke="#142142" stroke-width="0.5">Portfolio</text>
+      <text x="50" y="90" font-size="10" font-weight="bold" text-anchor="middle" fill="#97CC04" stroke="#142142" stroke-width="0.5">Portfolio</text>
     </svg>
   </div> 
 
@@ -112,7 +113,14 @@
 
   
  
-  <footer></footer>
+  <footer class="footer">
+    <div class="footer__div">
+      <a class="footer_mail" href="mailto:pawel.janik.1983@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a class="footer_mail" href="https://www.linkedin.com/in/pawel--janik/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a class="footer_mail" href="https://github.com/H4m4k" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <p class="footer__paragraph footer__paragraph--padding-right">Copyright &copy; 2021 Paweł Janik MMX.</p>
+  </footer>
 
   <img class="skills" src="/img/technology.svg" alt="Logo that looks like an H">
 

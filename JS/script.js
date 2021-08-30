@@ -71,7 +71,7 @@ function shapeManager(param) {
                         break;
 
                 case 'portfolio':
-                        manager['portfolio'].style.stroke = '#405C7D'
+                        manager['portfolio'].style.stroke = '#97CC04'
                         manager['portfolio'].parentElement.classList.add('on_Top')
                         manager['portfolio'].parentElement.classList.remove('off')
                         break;

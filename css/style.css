@@ -50,17 +50,43 @@ nav > a#resume:hover{
     scale: 1.2;
 }
 nav > a#portfolio:hover{
-    color: #405C7D;
+    color: #97CC04;
     scale: 1.2;
 }
 
 
 main {}
 
-footer {
+.footer {
     grid-area: 6/2 / 7/4;
     background-color: #F1A403;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+.footer__paragraph,
+.footer_mail {
+    color: #142142;
+    padding: 0 0 0 2em;
+}
+.footer__paragraph--padding-right {
+    padding: 0 2em 0 0;
+}
+.footer_mail{
+    font-weight: bolder;
+    text-decoration: none;
+}
+.footer_mail:hover {
+    text-decoration: overline underline;
+    color: #F1A403;
+}
+.fab:hover,
+.fas:hover {
+    background-color: #142142;
+    padding: 0.2em;
+    border-radius: 25%;
+}
+
 
 
 
@@ -179,4 +205,8 @@ footer {
 }  
 .welcome__greet--square--bottom {
     transform:translateY(20vh)
+}
+
+.square__img--invert {
+    filter: brightness(40%) sepia(100%);
 }
