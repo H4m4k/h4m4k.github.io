@@ -57,7 +57,10 @@ nav > a#portfolio:hover{
 
 main {}
 
-footer {}
+footer {
+    grid-area: 6/2 / 7/4;
+    background-color: #F1A403;
+}
 
 
 
@@ -130,19 +133,19 @@ footer {}
 
 
 .welcome__greet--circle--top {
-    transform: translateY(-1em);
+    transform: translateY(-10vh);
 }
 .welcome__greet--circle--left {
-    transform: translate(-2em);
+    transform: translate(-8vw);
 }
 .welcome__greet--circle--right {
-    transform: translate(2.5em);
+    transform: translate(10vw);
 }
 .welcome__greet--circle--bottom--left {
-    transform: translate(-1em,4em);
+    transform: translate(-2vw,17vh);
 }
 .welcome__greet--circle--bottom--right {
-    transform: translate(1em,4em);
+    transform: translate(2vw,17vh);
 }
 
 .skills {
@@ -155,25 +158,25 @@ footer {}
 
 
 .welcome__greet--triangle--left {
-    transform: translate(-3em,2.15em);
+    transform: translate(-12vw,13vh);
   }
   
 .welcome__greet--triangle--right {
-    transform: translate(4.5em,1em);
+    transform: translate(17vw,5vh);
   } 
 .welcome__greet--triangle--visible--none {
     opacity: 0;
   } 
   
 .welcome__greet--triangle--bottom {
-    transform: translateY(4.5em);
+    transform: translateY(18vh);
   }
 
 
 
 .welcome__greet--square--top {
-    transform: translate(-1.6em,-2em);
+    transform: translate(-5vw,-16vh);
 }  
 .welcome__greet--square--bottom {
-    transform:translateY(5em)
+    transform:translateY(20vh)
 }
