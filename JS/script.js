@@ -59,7 +59,7 @@ function shapeManager(param) {
         switch(param) {
 
                 case 'about':
-                        manager['about'].style.stroke = '#99ACC2'
+                        manager['about'].style.stroke = '#6683A3'
                         manager['about'].parentElement.classList.add('on_Top')
                         manager['about'].parentElement.classList.remove('off')
                         break;
@@ -118,13 +118,13 @@ function spread(param) {
                 case 'triangle_on':
                         welcome.classList.add('welcome__greet--triangle--left')
                         iam.classList.add('welcome__greet--triangle--right')
-                        name.classList.add('welcome__greet--triangle--visible--none')
+                        name.classList.add('welcome__greet--triangle--double-bottom')
                         front.classList.add('welcome__greet--triangle--bottom')
                         dev.classList.add('welcome__greet--triangle--bottom')
                         break;
 
                 case 'triangle_off':
-                        name.classList.remove('welcome__greet--triangle--visible--none')
+                        name.classList.remove('welcome__greet--triangle--double-bottom')
                         welcome.classList.remove('welcome__greet--triangle--left')
                         iam.classList.remove('welcome__greet--triangle--right')
                         front.classList.remove('welcome__greet--triangle--bottom')
