@@ -1,53 +1,88 @@
-const about = document.querySelector('#about');
-const resume = document.querySelector('#resume')
-const portfolio = document.querySelector('#portfolio')
+const about_Nav = document.querySelector('.nav-About');
+const resume_Nav = document.querySelector('.nav-Resume')
+const portfolio_Nav = document.querySelector('.nav-Portfolio')
 
 const about_Path = document.querySelector('.about_Path')
 const resume_Path = document.querySelector('.resume_Path')
 const portfolio_Path = document.querySelector('.portfolio_Path')
 
-const welcome = document.querySelector('.hello')
+const about_Window = document.querySelector('.about')
+const resume_Window = document.querySelector('.resume')
+
+const hello = document.querySelector('.hello')
 const iam = document.querySelector('.iam')
 const name = document.querySelector('.name')
 const front = document.querySelector('.front')
 const dev = document.querySelector('.dev')
 
-const paragraph = document.querySelectorAll('p')
 
 const manager = {
         about: about_Path,
         resume: resume_Path,
-        portfolio: portfolio_Path
+        portfolio: portfolio_Path,
+        about_Window: about_Window,
+        resume_Window: resume_Window
 }
 
+let click = 'no'
 
 
-about.onmouseover = function() {
-        shapeManager('about')
-        spread('circle_on')
-}
-about.onmouseout =  function() {
+
+
+
+about_Nav.addEventListener('click', function() {
+        event.preventDefault()
+        about_Window.classList.toggle('off')
         shapeManager('about_off')
         spread('circle_off')
-        
+        clickCheck('about_Window')
+        // if( about_Window.classList.value.includes('off')) {
+        //         return click = 'no'
+        // } else {
+        //         return click = 'yes'
+        // }
+})
+
+
+resume_Nav.addEventListener('click', function() {
+        event.preventDefault()
+        resume_Window.classList.toggle('off')
+        shapeManager('resume_off')
+        spread('triangle_off')
+        clickCheck('resume_Window')
+})
+
+
+about_Nav.onmouseover = function() {
+        if(click !== "yes") {
+                shapeManager('about')
+                spread('circle_on')
+        } else {
+                shapeManager('about_off')
+                spread('circle_off')
+        }
+}
+about_Nav.onmouseout =  function() {
+        shapeManager('about_off')
+        spread('circle_off')       
 }
 
 
-resume.onmouseover = function() {
+resume_Nav.onmouseover = function() {
         shapeManager('resume')
         spread('triangle_on')
 }
-resume.onmouseout = function() {
+resume_Nav.onmouseout = function() {
         shapeManager('resume_off')
         spread('triangle_off')
 }
 
 
-portfolio.onmouseover = function() {
+portfolio_Nav.onmouseover = function() {
         shapeManager('portfolio')
         spread('square_on')
 }
-portfolio.onmouseout = function() {
+portfolio_Nav.onmouseout = function() {
         shapeManager('portfolio_off')
         spread('square_off')
 }
@@ -100,7 +135,7 @@ function shapeManager(param) {
 function spread(param) {
         switch(param) {
                 case 'circle_on':
-                        welcome.classList.add('welcome__greet--circle--top')
+                        hello.classList.add('welcome__greet--circle--top')
                         iam.classList.add('welcome__greet--circle--left')
                         name.classList.add('welcome__greet--circle--right')
                         front.classList.add('welcome__greet--circle--bottom--left')
@@ -108,7 +143,7 @@ function spread(param) {
                         break;
 
                 case 'circle_off':
-                        welcome.classList.remove('welcome__greet--circle--top')
+                        hello.classList.remove('welcome__greet--circle--top')
                         iam.classList.remove('welcome__greet--circle--left')
                         name.classList.remove('welcome__greet--circle--right')
                         front.classList.remove('welcome__greet--circle--bottom--left')
@@ -116,31 +151,27 @@ function spread(param) {
                         break;
 
                 case 'triangle_on':
-                        welcome.classList.add('welcome__greet--triangle--left')
+                        hello.classList.add('welcome__greet--triangle--left')
                         iam.classList.add('welcome__greet--triangle--right')
-                        name.classList.add('welcome__greet--triangle--double-bottom')
                         front.classList.add('welcome__greet--triangle--bottom')
                         dev.classList.add('welcome__greet--triangle--bottom')
                         break;
 
                 case 'triangle_off':
-                        name.classList.remove('welcome__greet--triangle--double-bottom')
-                        welcome.classList.remove('welcome__greet--triangle--left')
+                        hello.classList.remove('welcome__greet--triangle--left')
                         iam.classList.remove('welcome__greet--triangle--right')
                         front.classList.remove('welcome__greet--triangle--bottom')
                         dev.classList.remove('welcome__greet--triangle--bottom')
                         break;
 
                 case 'square_on':
-                        welcome.classList.add('welcome__greet--triangle--visible--none')
-                        iam.classList.add('welcome__greet--triangle--visible--none')
                         name.classList.add('welcome__greet--square--top')
                         front.classList.add('welcome__greet--square--bottom')
                         dev.classList.add('welcome__greet--square--bottom')
                         break;
 
                 case 'square_off':
-                        welcome.classList.remove('welcome__greet--triangle--visible--none')
+                        hello.classList.remove('welcome__greet--triangle--visible--none')
                         iam.classList.remove('welcome__greet--triangle--visible--none')
                         name.classList.remove('welcome__greet--square--top')
                         front.classList.remove('welcome__greet--square--bottom')
@@ -151,5 +182,13 @@ function spread(param) {
 
 }
 
+
+function clickCheck(parameter) {
+        if( manager[parameter].classList.value.includes('off')) {
+                return click = 'no'
+        } else {
+                return click = 'yes'
+        }
+}
 
 
