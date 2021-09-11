@@ -21,7 +21,7 @@
 
 
 .welcome {
-    grid-area: 2/2 / 2/4;
+    grid-area: 2/2 / 4/4;
     place-self: center;
     color: #142142;
     text-align: center;
@@ -46,7 +46,7 @@
 
 
 .welcome__greet--circle--top {
-    transform: translateY(-10vh);
+    transform: translateY(-14vh);
     color: #f1a403;
     
 }
@@ -271,7 +271,7 @@
     width: 100%;
 
     display: grid;
-    grid-template: .1fr .2fr repeat(3,.5fr) .1fr / .3fr repeat(2,1fr) .3fr;
+    grid-template: .1fr .3fr repeat(3,.5fr) .2fr / .3fr repeat(2,1fr) .3fr;
 }
 .about__wrapper--border {
     border: 1em solid darkgoldenrod;
@@ -279,7 +279,7 @@
 .about__Headline {
     grid-area: 2/2 /3/4;
     font-size: xxx-large;
-    align-self: center;
+    align-self: end;
 }
 .about--color {
     color: #142142;

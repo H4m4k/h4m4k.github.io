@@ -9,6 +9,7 @@ const portfolio_Path = document.querySelector('.portfolio_Path')
 const about_Window = document.querySelector('.about')
 const resume_Window = document.querySelector('.resume')
 
+const welcome = document.querySelector('.welcome')
 const hello = document.querySelector('.hello')
 const iam = document.querySelector('.iam')
 const name = document.querySelector('.name')
@@ -36,12 +37,22 @@ about_Nav.addEventListener('click', function() {
         shapeManager('about_off')
         spread('circle_off')
         clickCheck('about_Window')
-        // if( about_Window.classList.value.includes('off')) {
-        //         return click = 'no'
-        // } else {
-        //         return click = 'yes'
-        // }
 })
+about_Nav.onmouseover = function() {
+        if(click !== "yes") {
+                shapeManager('about')
+                spread('circle_on')
+        } else {
+                shapeManager('about_off')
+                spread('vanish')
+        }
+}
+about_Nav.onmouseout =  function() {
+        shapeManager('about_off')
+        spread('circle_off')       
+}
+
+
 
 
 resume_Nav.addEventListener('click', function() {
@@ -51,26 +62,14 @@ resume_Nav.addEventListener('click', function() {
         spread('triangle_off')
         clickCheck('resume_Window')
 })
-
-
-about_Nav.onmouseover = function() {
-        if(click !== "yes") {
-                shapeManager('about')
-                spread('circle_on')
-        } else {
-                shapeManager('about_off')
-                spread('circle_off')
-        }
-}
-about_Nav.onmouseout =  function() {
-        shapeManager('about_off')
-        spread('circle_off')       
-}
-
-
 resume_Nav.onmouseover = function() {
-        shapeManager('resume')
-        spread('triangle_on')
+        if(click !== "yes") {
+                shapeManager('resume')
+                spread('triangle_on')
+        } else {
+                shapeManager('resume_off')
+                spread('vanish')
+        }
 }
 resume_Nav.onmouseout = function() {
         shapeManager('resume_off')
@@ -177,6 +176,10 @@ function spread(param) {
                         front.classList.remove('welcome__greet--square--bottom')
                         dev.classList.remove('welcome__greet--square--bottom')
                         break;
+
+                case 'vanish':
+                        welcome.classList.toggle('off')
+                                
                 }
         return 0;
 
