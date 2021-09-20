@@ -27,25 +27,29 @@
     text-align: center;
 }
 .welcome__div {
-    display: grid;
-    grid-template: repeat(5,min-content)/repeat(2,1fr);
-}
-.welcome__txt.hello {
-    grid-area: 1/1 / 3/3;
+    position: relative;
 }
 .welcome__txt {
     font-size: 4em;
     font-weight: bolder;
     letter-spacing: 2px;
+    position: absolute;
+}
+.welcome__txt.hello,
+.welcome__txt.name {
+    left: 50%;
 }
 .welcome__txt--2em-font {
     font-size: 2em;
     font-style: italic;
     margin: .5em 0 0 0;
 }
+.welcome__txt--2em-font.front,
+.welcome__txt--2em-font.dev {
+    display: inline-block;
+}
 
-
-.welcome__greet--circle--top {
+/* .welcome__greet--circle--top {
     transform: translateY(-14vh);
     color: #f1a403;
     
@@ -65,7 +69,7 @@
 .welcome__greet--circle--bottom--right {
     transform: translate(2vw,17vh);
     color: #f1a403;
-}
+} */
 
 
 
@@ -271,24 +275,26 @@
     width: 100%;
 
     display: grid;
-    grid-template: .1fr .3fr repeat(3,.5fr) .2fr / .3fr repeat(2,1fr) .3fr;
+    grid-template: .2fr .3fr 1fr .3fr / .1fr 1fr .2fr;
 }
 .about__wrapper--border {
     border: 1em solid darkgoldenrod;
 }
 .about__Headline {
-    grid-area: 2/2 /3/4;
-    font-size: xxx-large;
+    grid-area: 2/2 /3/3;
+    font-size: xx-large;
     align-self: end;
+    padding: .5em 1em 1.5em 1em;
 }
 .about--color {
     color: #142142;
 }
 .about__Paragraph {
-    grid-area: 3/2 / 6/4;
-    font-size: larger;
-    line-height: 1.5;
-    place-self: center;
+    grid-area: 3/2 / 4/3;
+    min-height: 100%;
+    font-size: 1.2em;
+    line-height: 1.2;
+    padding: 1em;
 }
 .about__figure {
     position: absolute;
