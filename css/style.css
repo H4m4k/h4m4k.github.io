@@ -15,96 +15,9 @@
     grid-area: 1/2 / 6/4;
 }
 
-   
+ 
 
-/* H E A D E R - nav and side bar */
-
-
-.welcome {
-    grid-area: 2/2 / 4/4;
-    place-self: center;
-    color: #142142;
-    text-align: center;
-}
-.welcome__div {
-    position: relative;
-}
-.welcome__txt {
-    font-size: 4em;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    position: absolute;
-}
-.welcome__txt.hello,
-.welcome__txt.name {
-    left: 50%;
-}
-.welcome__txt--2em-font {
-    font-size: 2em;
-    font-style: italic;
-    margin: .5em 0 0 0;
-}
-.welcome__txt--2em-font.front,
-.welcome__txt--2em-font.dev {
-    display: inline-block;
-}
-
-/* .welcome__greet--circle--top {
-    transform: translateY(-14vh);
-    color: #f1a403;
-    
-}
-.welcome__greet--circle--left {
-    transform: translate(-8vw);
-    color: #f1a403;
-}
-.welcome__greet--circle--right {
-    transform: translate(10vw);
-    color: #f1a403;
-}
-.welcome__greet--circle--bottom--left {
-    transform: translate(-2vw,17vh);
-    color: #f1a403;
-}
-.welcome__greet--circle--bottom--right {
-    transform: translate(2vw,17vh);
-    color: #f1a403;
-} */
-
-
-
-.welcome__greet--triangle--left {
-    transform: translate(-13vw,13vh);
-    color: #f1a403;
-}
-.welcome__greet--triangle--right {
-    transform: translate(18vw,5vh);
-    color: #f1a403;    
-} 
-.welcome__greet--triangle--bottom {
-    transform: translateY(20vh);
-    color: #f1a403;
-}
-.triangle__img--sharpen { /* chrome blurrs images when downsizing  */
-    image-rendering: -webkit-optimize-contrast;
-}
-
-
-.welcome__greet--square--top {
-    transform: translate(-4.8vw, -10vw);
-    color: #f1a403;
-}  
-.welcome__greet--square--bottom {
-    transform:translateY(12vw);
-    color: #f1a403;
-}
-.square__img--invert {  
-    filter: brightness(40%) sepia(100%);
-}
-
-
-
-
+/***********  NAVIGATION MENU - SIDEBAR  *********/
 
 
 .roadmap {
@@ -147,14 +60,66 @@
 
 
 
+/***********  ANIMATIONS  *********/
+
+
+.welcome {
+    grid-area: 2/2 / 4/4;
+    place-self: center;
+    color: #142142;
+    text-align: center;
+}
+.welcome__div {
+    position: relative;
+}
+.welcome__txt {
+    font-size: 4em;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    position: absolute;
+}
+.welcome__txt--2em-font {
+    font-size: 2em;
+    font-style: italic;
+    margin: .5em 0 0 0;
+}
+.welcome__txt--2em-font.front,
+.welcome__txt--2em-font.dev {
+    display: inline-block;
+}
+
+.triangle__img--sharpen { /* chrome blurrs images when downsizing  */
+    image-rendering: -webkit-optimize-contrast;
+}
+
+
+.welcome__greet--square--top {
+    transform: translate(-4.8vw, -10vw);
+    color: #f1a403;
+}  
+.welcome__greet--square--bottom {
+    transform:translateY(12vw);
+    color: #f1a403;
+}
+.square__img--invert {  
+    filter: brightness(40%) sepia(100%);
+}
+
+
+
+
+
+
+
+
+
+/*********** NAVIGATION -- ABOUT ME *********/
+
+
 .about-Me {
     grid-area: 1/2 / 7/4;
-    
-    /* display: inline-block; */
     place-self: center;
-    /* width: 38%; */
     padding: 2em;
-    /* height: 70%; */
     color: white;
     display: flex;
     flex-direction: column;
@@ -162,6 +127,28 @@
 .about-Me > p {
     place-self: center;
 }
+
+
+
+
+
+/*********** NAVIGATION -- RESUME  *********/
+
+.pdf_Resume {
+    grid-area: 1/2 / 6/4;
+    place-self: center;
+}
+
+
+
+
+
+/*********** NAVIGATION -- PORTFOLIO  *********/
+
+
+
+
+/*********** FOOTER  *********/
 
 .footer {
     grid-area: 6/2 / 7/4;
@@ -235,8 +222,8 @@
     z-index: 1;
 }
 .animate {
-    transition: transform .4s ease-out .1s , 
-    color .6s .3s;
+    transition: transform .3s ease-out .1s , 
+    color .2s .2s;
 }
 
 .logo {
@@ -255,7 +242,9 @@
     width: 28%;
     place-self: end;
 }
-
+.left_50 {
+    left: 50%;
+}
 
 
 /* NAVIGATION -- ABOUT   */
@@ -298,19 +287,13 @@
 }
 .about__figure {
     position: absolute;
-    top: -5%;
-    right: -12%;
+    top: -8%;
+    right: -20%;
 }
 .about__img {
     border-radius: 50%;
-    width: 80%;
+    width: 60%;
     border: 1em solid darkgoldenrod;
 }
   
 
-/* NAVIGATION -- RESUME   */
-
-.pdf_Resume {
-    grid-area: 1/2 / 6/4;
-    place-self: center;
-}

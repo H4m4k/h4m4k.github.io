@@ -14,7 +14,7 @@ const resume_Window = document.querySelector('.resume')
 //const portfolio_Window = 
 
 // Below are constants that represent the animated text when hovering over nav link ( Hello I am Paweł FrontEnd Developer)
-const welcome = document.querySelector('.welcome')
+const welcome = document.querySelector('.welcome__div')
 const hello = document.querySelector('.hello')
 const iam = document.querySelector('.iam')
 const name = document.querySelector('.name')
@@ -44,24 +44,25 @@ let click = 'no'
 
 about_Nav.addEventListener('click', function() {
         event.preventDefault()
-        about_Window.classList.toggle('off')
-        resume_Window.classList.add('off')
-        shapeManager('about_off')
-        spread('circle_off')
+        shapeManager('about_circle-off')
+        spread('about_anim-off')
         clickCheck('about_Window')
+        about_Window.classList.toggle('off')
+        portfolio_Window.classList.add('off')
+        resume_Window.classList.add('off')
 })
 about_Nav.onmouseover = function() {
         if(click !== "yes") {
-                shapeManager('about')
+                shapeManager('about_circle')
                 spread('about_anim')
         } else {
-                shapeManager('about_off')
-                spread('circle_off')
+                shapeManager('about_circle-off')
+                spread('about_anim-off')
         }
 }
 about_Nav.onmouseout =  function() {
-        shapeManager('about_off')
-        spread('circle_off')       
+        shapeManager('about_circle-off')
+        spread('about_anim-off')       
 }
 
 
@@ -69,26 +70,37 @@ about_Nav.onmouseout =  function() {
 
 resume_Nav.addEventListener('click', function() {
         event.preventDefault()
+        shapeManager('resume_off')
+        spread('triangle_anim-off')
         resume_Window.classList.toggle('off')
         about_Window.classList.add('off')
-        shapeManager('resume_off')
-        spread('triangle_off')
+        portfolio_Window.classList.add('off')
         clickCheck('resume_Window')
 })
 resume_Nav.onmouseover = function() {
         if(click !== "yes") {
                 shapeManager('resume')
-                spread('triangle_on')
+                spread('triangle_anim')
         } else {
                 shapeManager('resume_off')
-                spread('vanish')
+                spread('triangle_anim-off')
         }
 }
 resume_Nav.onmouseout = function() {
         shapeManager('resume_off')
-        spread('triangle_off')
+        spread('triangle_anim-off')
 }
 
+
+portfolio_Nav.addEventListener('click', function() {
+        event.preventDefault()
+        portfolio_Window.classList.toggle('off')
+        about_Window.classList.add('off')
+        resume_Window.classList.add('off')
+        shapeManager('resume_off')
+        spread('triangle_anim-off')
+        clickCheck('resume_Window')
+})
 
 portfolio_Nav.onmouseover = function() {
         shapeManager('portfolio')
@@ -113,7 +125,7 @@ function clickCheck(parameter) {
 function shapeManager(param) {
         switch(param) {
 
-                case 'about':
+                case 'about_circle':
                         manager['about'].style.stroke = '#6683A3'
                         manager['about'].parentElement.classList.add('on_Top')
                         manager['about'].parentElement.classList.remove('off')
@@ -122,6 +134,7 @@ function shapeManager(param) {
                 case 'resume':
                         manager['resume'].style.stroke = '#782323'
                         manager['resume'].parentElement.classList.add('on_Top')
+                        resume_Window.classList.add('on_Top')
                         manager['resume'].parentElement.classList.remove('off')
                         break;
 
@@ -131,7 +144,7 @@ function shapeManager(param) {
                         manager['portfolio'].parentElement.classList.remove('off')
                         break;
 
-                case 'about_off':
+                case 'about_circle-off':
                         manager['about'].style.stroke = '#333745'
                         manager['about'].parentElement.classList.add('off')
                         manager['about'].parentElement.classList.remove('on_Top')
@@ -140,7 +153,6 @@ function shapeManager(param) {
                 case 'resume_off':
                         manager['resume'].style.stroke = '#333745'
                         manager['resume'].parentElement.classList.add('off')
-                        manager['resume'].parentElement.classList.remove('on_Top')
                         break;
                 
                 case 'portfolio_off':
@@ -155,50 +167,39 @@ function shapeManager(param) {
 function spread(param) {
         switch(param) {
                 case 'about_anim':
+                        text_Color('#f1a403')
                         hello.style.transform = 'translate(-50%,-3em)'
-                        hello.style.color = "#f1a403"
                         iam.style.transform = 'translateX(-3em)'
-                        iam.style.color = "#f1a403"
                         name.style.transform = 'translateX(3em)'
-                        name.style.color = "#f1a403"
                         front.style.transform = 'translate(-2em,6.5em)'
-                        front.style.color = "#f1a403"
                         dev.style.transform = 'translate(2em,6.5em)'
-                        dev.style.color = "#f1a403"
-
-                        // hello.classList.add('welcome__greet--circle--top')
-                        // iam.classList.add('welcome__greet--circle--left')
-                        // name.classList.add('welcome__greet--circle--right')
-                        // front.classList.add('welcome__greet--circle--bottom--left')
-                        // dev.classList.add('welcome__greet--circle--bottom--right')
                         break;
 
-                case 'circle_off':
-                        hello.style.color = "#142142"
-                        iam.style.color ='#142142'
-                        name.style.color ='#142142'
-                        front.style.color ='#142142'
-                        dev.style.color ='#142142'
-                        
-                        // hello.classList.remove('welcome__greet--circle--top')
-                        // iam.classList.remove('welcome__greet--circle--left')
-                        // name.classList.remove('welcome__greet--circle--right')
-                        // front.classList.remove('welcome__greet--circle--bottom--left')
-                        // dev.classList.remove('welcome__greet--circle--bottom--right')
+                case 'about_anim-off':
+                        text_Color('#142142')
+                        hello.style.transform = 'translate(-50%,0)'
+                        iam.style.transform = 'translateX(50%)'
+                        name.style.transform = 'translateX(0)'
+                        front.style.transform = 'translate(0,0)'
+                        dev.style.transform = 'translate(0,0)'
                         break;
 
-                case 'triangle_on':
-                        hello.classList.add('welcome__greet--triangle--left')
-                        iam.classList.add('welcome__greet--triangle--right')
-                        front.classList.add('welcome__greet--triangle--bottom')
-                        dev.classList.add('welcome__greet--triangle--bottom')
+                case 'triangle_anim':
+                        text_Color('#f1a403')
+                        iam.style.transform = 'translate(50%,-3em)'
+                        front.style.transform = 'translate(-.5em,7em)'
+                        dev.style.transform = 'translate(.5em,7em)'
+                        hello.classList.add('off')
+                        name.classList.add('off')
                         break;
 
-                case 'triangle_off':
-                        hello.classList.remove('welcome__greet--triangle--left')
-                        iam.classList.remove('welcome__greet--triangle--right')
-                        front.classList.remove('welcome__greet--triangle--bottom')
-                        dev.classList.remove('welcome__greet--triangle--bottom')
+                case 'triangle_anim-off':
+                        text_Color('#142142')
+                        iam.style.transform = 'translate(50%,0)'
+                        front.style.transform = 'translate(0,0)'
+                        dev.style.transform = 'translate(0,0)'
+                        hello.classList.remove('off')
+                        name.classList.remove('off')      
                         break;
 
                 case 'square_on':
@@ -214,16 +215,17 @@ function spread(param) {
                         front.classList.remove('welcome__greet--square--bottom')
                         dev.classList.remove('welcome__greet--square--bottom')
                         break;
-
-                case 'vanish':
-                        welcome.classList.toggle('off')
                                 
                 }
         return 0;
 
 }
 
+function text_Color (param) {
+        const all = document.querySelectorAll('.welcome__div > p')
+        all.forEach(element => element.style.color = `${param}`)
+        return 0;
+}
 
 
-
-
+// create a manager to turn off the windows when one is clicked ??
