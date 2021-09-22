@@ -70,7 +70,7 @@ about_Nav.onmouseout =  function() {
 
 resume_Nav.addEventListener('click', function() {
         event.preventDefault()
-        shapeManager('resume_off')
+        shapeManager('resume_triangle-off')
         spread('triangle_anim-off')
         resume_Window.classList.toggle('off')
         about_Window.classList.add('off')
@@ -79,15 +79,15 @@ resume_Nav.addEventListener('click', function() {
 })
 resume_Nav.onmouseover = function() {
         if(click !== "yes") {
-                shapeManager('resume')
+                shapeManager('resume_triangle')
                 spread('triangle_anim')
         } else {
-                shapeManager('resume_off')
+                shapeManager('resume_triangle-off')
                 spread('triangle_anim-off')
         }
 }
 resume_Nav.onmouseout = function() {
-        shapeManager('resume_off')
+        shapeManager('resume_triangle-off')
         spread('triangle_anim-off')
 }
 
@@ -97,14 +97,20 @@ portfolio_Nav.addEventListener('click', function() {
         portfolio_Window.classList.toggle('off')
         about_Window.classList.add('off')
         resume_Window.classList.add('off')
-        shapeManager('resume_off')
+        shapeManager('resume_triangle-off')
         spread('triangle_anim-off')
         clickCheck('portfolio_Window')
 })
 
 portfolio_Nav.onmouseover = function() {
-        shapeManager('portfolio')
-        spread('square_on')
+        if(click !== "yes") {
+                shapeManager('portfolio')
+                spread('square_on')
+        } else {
+                shapeManager('portfolio_off')
+                spread('square_off')
+        }
+        
 }
 portfolio_Nav.onmouseout = function() {
         shapeManager('portfolio_off')
@@ -131,7 +137,7 @@ function shapeManager(param) {
                         manager['about'].parentElement.classList.remove('off')
                         break;
 
-                case 'resume':
+                case 'resume_triangle':
                         manager['resume'].style.stroke = '#782323'
                         manager['resume'].parentElement.classList.add('on_Top')
                         resume_Window.classList.add('on_Top')
@@ -150,7 +156,7 @@ function shapeManager(param) {
                         manager['about'].parentElement.classList.remove('on_Top')
                         break;
 
-                case 'resume_off':
+                case 'resume_triangle-off':
                         manager['resume'].style.stroke = '#333745'
                         manager['resume'].parentElement.classList.add('off')
                         break;
@@ -203,17 +209,21 @@ function spread(param) {
                         break;
 
                 case 'square_on':
-                        name.classList.add('welcome__greet--square--top')
-                        front.classList.add('welcome__greet--square--bottom')
-                        dev.classList.add('welcome__greet--square--bottom')
+                        text_Color('#f1a403')
+                        name.style.transform = 'translate(-50%,3.5em)'
+                        front.style.transform = 'translate(-25%,-5em)'
+                        dev.style.transform = 'translate(25%,-5em)'
+                        iam.classList.add('off')
+                        hello.classList.add('off')
                         break;
 
                 case 'square_off':
-                        hello.classList.remove('welcome__greet--triangle--visible--none')
-                        iam.classList.remove('welcome__greet--triangle--visible--none')
-                        name.classList.remove('welcome__greet--square--top')
-                        front.classList.remove('welcome__greet--square--bottom')
-                        dev.classList.remove('welcome__greet--square--bottom')
+                        text_Color('#142142')
+                        name.style.transform = 'translate(-50%,0)'
+                        front.style.transform = 'translate(0,0)'
+                        dev.style.transform = 'translate(0,0)'
+                        iam.classList.remove('off')
+                        hello.classList.remove('off')
                         break;
                                 
                 }

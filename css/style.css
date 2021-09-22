@@ -92,15 +92,6 @@
     image-rendering: -webkit-optimize-contrast;
 }
 
-
-.welcome__greet--square--top {
-    transform: translate(-4.8vw, -10vw);
-    color: #f1a403;
-}  
-.welcome__greet--square--bottom {
-    transform:translateY(12vw);
-    color: #f1a403;
-}
 .square__img--invert {  
     filter: brightness(40%) sepia(100%);
 }
@@ -223,7 +214,7 @@
 }
 .animate {
     transition: transform .3s ease-out .1s , 
-    color .2s .2s;
+    color .1s .2s;
 }
 
 .logo {
