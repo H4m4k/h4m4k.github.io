@@ -135,7 +135,17 @@
 
 
 /*********** NAVIGATION -- PORTFOLIO  *********/
+.portfolio {
+    grid-area: 1/2 /6/4;
+    background: aliceblue;
+    display: flex;
+    place-items: center;
+    justify-content: center;
 
+    width: 70%;
+    height: 70%;
+    place-self: center;
+}
 
 
 

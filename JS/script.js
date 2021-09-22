@@ -97,8 +97,8 @@ portfolio_Nav.addEventListener('click', function() {
         portfolio_Window.classList.toggle('off')
         about_Window.classList.add('off')
         resume_Window.classList.add('off')
-        shapeManager('resume_triangle-off')
-        spread('triangle_anim-off')
+        shapeManager('portfolio_off')
+        spread('square_off')
         clickCheck('portfolio_Window')
 })
 
@@ -147,6 +147,7 @@ function shapeManager(param) {
                 case 'portfolio':
                         manager['portfolio'].style.stroke = '#97CC04'
                         manager['portfolio'].parentElement.classList.add('on_Top')
+                        portfolio_Window.classList.add('on_Top')
                         manager['portfolio'].parentElement.classList.remove('off')
                         break;
 
