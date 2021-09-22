@@ -11,7 +11,7 @@ const portfolio_Path = document.querySelector('.portfolio_Path')
 // *_Window constants are the content windows showing up when nav menu link is clicked
 const about_Window = document.querySelector('.about')
 const resume_Window = document.querySelector('.resume')
-//const portfolio_Window = 
+const portfolio_Window = document.querySelector('.portfolio')
 
 // Below are constants that represent the animated text when hovering over nav link ( Hello I am Paweł FrontEnd Developer)
 const welcome = document.querySelector('.welcome__div')
@@ -46,10 +46,10 @@ about_Nav.addEventListener('click', function() {
         event.preventDefault()
         shapeManager('about_circle-off')
         spread('about_anim-off')
-        clickCheck('about_Window')
         about_Window.classList.toggle('off')
         portfolio_Window.classList.add('off')
         resume_Window.classList.add('off')
+        clickCheck('about_Window')
 })
 about_Nav.onmouseover = function() {
         if(click !== "yes") {
@@ -99,7 +99,7 @@ portfolio_Nav.addEventListener('click', function() {
         resume_Window.classList.add('off')
         shapeManager('resume_off')
         spread('triangle_anim-off')
-        clickCheck('resume_Window')
+        clickCheck('portfolio_Window')
 })
 
 portfolio_Nav.onmouseover = function() {
@@ -228,4 +228,3 @@ function text_Color (param) {
 }
 
 
-// create a manager to turn off the windows when one is clicked ??
