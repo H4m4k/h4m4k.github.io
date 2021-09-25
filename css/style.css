@@ -76,6 +76,7 @@
   font-size: 2em;
   font-style: italic;
   margin: 0.5em 0 0 0;
+  opacity: 0%;
 }
 .welcome__txt--2em-font.front,
 .welcome__txt--2em-font.dev {
@@ -171,6 +172,7 @@
   width: 70%;
   height: 70%;
   place-self: center;
+  flex-wrap: wrap;
 }
 .portfolio--style {
   background-color: #6683a3ff;
@@ -182,7 +184,7 @@
 .portfolio__link {
   display: flex;
   place-content: center;
-  padding: 3em 1em;
+  padding: 2em 1em;
 }
 .portfolio__img {
   width: 85%;
@@ -285,6 +287,7 @@
   grid-area: 1/2 / 6/4;
   place-self: center;
   height: 20%;
+  z-index: -1;
 }
 .left_50 {
   left: 50%;

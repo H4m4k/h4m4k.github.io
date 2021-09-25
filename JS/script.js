@@ -1,5 +1,5 @@
 // *_Nav constants are the nav menu links
-const home = document.querySelector("#H4__logo");
+const h_logo = document.querySelector("#H4__logo");
 const about_Nav = document.querySelector(".nav-About");
 const resume_Nav = document.querySelector(".nav-Resume");
 const portfolio_Nav = document.querySelector(".nav-Portfolio");
@@ -32,7 +32,7 @@ const manager = {
 
 let click = "no";
 
-home.addEventListener("click", () => {
+h_logo.addEventListener("click", function home() {
   about_Window.classList.add("off");
   resume_Window.classList.add("off");
   portfolio_Window.classList.add("off");
