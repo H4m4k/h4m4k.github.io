@@ -13,7 +13,7 @@
    version="1.1"
    id="svg2003"
    inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
-   sodipodi:docname="cicruict board small.svg">
+   sodipodi:docname="cicruict_board_small.svg">
   <defs
      id="defs1997" />
   <sodipodi:namedview
@@ -23,17 +23,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2546497"
-     inkscape:cx="261.92441"
-     inkscape:cy="254.99524"
+     inkscape:zoom="2.5211593"
+     inkscape:cx="260.20303"
+     inkscape:cy="222.94149"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-x="1912"
+     inkscape:window-y="87"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -421,8 +421,8 @@
       <path
          id="XMLID_907_"
          style="fill:#f1a403;fill-opacity:1"
-         d="m 1331.3558,842.6 v -35.4 h -10 v 25.4 h -118.3 V 882 h -70.6 l -160.59997,160.6 h -94.50306 v 10 h 98.60306 L 1136.6558,892 h 76.4 v -49.4 z"
-         sodipodi:nodetypes="ccccccccccccccc" />
+         d="m 1331.3558,842.6 0.2668,-10 H 1203.0558 V 882 h -70.6 l -160.59997,160.6 h -94.50306 v 10 h 98.60306 L 1136.6558,892 h 76.4 v -49.4 z"
+         sodipodi:nodetypes="ccccccccccccc" />
       <linearGradient
          id="XMLID_77_"
          gradientUnits="userSpaceOnUse"
@@ -698,5 +698,69 @@
        d="m 40.821308,274.991 c 0.23332,-0.0983 0.43075,-0.23124 0.59204,-0.41053 0.26492,-0.29875 0.43389,-0.70154 0.42615,-1.12461 l -0.002,-0.094 c -0.0315,-0.43439 -0.23834,-0.81855 -0.53708,-1.08347 -0.29874,-0.26492 -0.70153,-0.43389 -1.1246,-0.42615 l -0.094,0.002 c -0.43439,0.0315 -0.81854,0.23834 -1.08346,0.53708 -0.26492,0.29875 -0.43389,0.70154 -0.42615,1.12461 l 0.002,0.094 v 0 c 0.0314,0.4344 0.23833,0.81855 0.53708,1.08347 0.15535,0.13823 0.33378,0.25252 0.53485,0.31938 z m -1.07386,-1.50861 c -0.002,-0.11752 0.0427,-0.2359 0.12346,-0.31967 0.0808,-0.0838 0.18545,-0.14446 0.30297,-0.14661 l 0.0235,-4.3e-4 c 0.11752,-0.002 0.2359,0.0427 0.31967,0.12346 0.0838,0.0808 0.14446,0.18545 0.14661,0.30297 l 4.3e-4,0.0235 c 0.002,0.11752 -0.0427,0.23589 -0.12346,0.31966 -0.0808,0.0838 -0.18545,0.14447 -0.30297,0.14662 l -0.0235,4.3e-4 c -0.11753,0.002 -0.23591,-0.0427 -0.31968,-0.12347 -0.0838,-0.0808 -0.14445,-0.18546 -0.1466,-0.30298 l -0.58696,0.0461 0.58696,-0.0461 z"
        style="fill:#bac7d6;fill-opacity:1;stroke-width:0.117539"
        sodipodi:nodetypes="ccscsscsscscccssssssssssscccs" />
+    <path
+       id="XMLID_1482_"
+       fill="url(#XMLID_5_)"
+       d="m 119.81487,258.48413 h 3.27479 c 0.36231,0 0.65496,0.29265 0.65496,0.65496 v 3.27479 c 0,0.58527 -0.7107,0.87792 -1.11483,0.45986 l -3.27479,-3.27478 c -0.41806,-0.40413 -0.12541,-1.11483 0.45987,-1.11483 z"
+       style="fill:#bac7d6;fill-opacity:1;stroke-width:0.139353" />
+    <path
+       id="XMLID_1482_-7"
+       fill="url(#XMLID_5_)"
+       d="m 142.50287,246.09162 v -3.11583 c 0,-0.34472 0.27844,-0.62316 0.62317,-0.62316 h 3.11583 c 0.55686,0 0.8353,0.6762 0.43754,1.06071 l -3.11583,3.11583 c -0.38451,0.39777 -1.06071,0.11933 -1.06071,-0.43755 z"
+       style="fill:#bac7d6;fill-opacity:1;stroke-width:0.132589" />
+    <circle
+       id="XMLID_1555_"
+       fill="url(#XMLID_46_)"
+       cx="135.94955"
+       cy="257.76358"
+       r="1.5027276"
+       style="fill:#bac7d6;fill-opacity:1;stroke-width:0.128438" />
+    <circle
+       id="XMLID_1563_"
+       fill="url(#XMLID_54_)"
+       cx="131.82668"
+       cy="257.76358"
+       r="1.5027276"
+       style="fill:#bac7d6;fill-opacity:1;stroke-width:0.128438" />
+    <path
+       id="XMLID_1482_-7-1"
+       fill="url(#XMLID_5_)"
+       d="m 150.56471,220.97956 v -3.06285 c 0,-0.33886 0.27371,-0.61257 0.61257,-0.61257 h 3.06285 c 0.54739,0 0.8211,0.66471 0.43009,1.04267 l -3.06283,3.06285 c -0.37797,0.391 -1.04268,0.1173 -1.04268,-0.4301 z"
+       style="fill:#bac7d6;fill-opacity:1;stroke-width:0.130334" />
+    <circle
+       id="XMLID_1555_-1"
+       fill="url(#XMLID_46_)"
+       cx="94.601196"
+       cy="227.73055"
+       r="1.5027276"
+       style="fill:#bac7d6;fill-opacity:1;stroke-width:0.128438" />
+    <circle
+       id="XMLID_1563_-1"
+       fill="url(#XMLID_54_)"
+       cx="90.478317"
+       cy="227.73055"
+       r="1.5027276"
+       style="fill:#bac7d6;fill-opacity:1;stroke-width:0.128438" />
+    <path
+       id="XMLID_1482_-7-3"
+       fill="url(#XMLID_5_)"
+       d="m 59.923796,257.93768 v -3.11583 c 0,-0.34472 0.27844,-0.62316 0.62317,-0.62316 h 3.11583 c 0.55686,0 0.8353,0.6762 0.43754,1.06071 l -3.11583,3.11583 c -0.38451,0.39777 -1.06071,0.11933 -1.06071,-0.43755 z"
+       style="fill:#bac7d6;fill-opacity:1;stroke-width:0.132589" />
+    <circle
+       id="XMLID_1555_-1-6"
+       fill="url(#XMLID_46_)"
+       cx="-189.26044"
+       cy="221.27078"
+       r="1.5027276"
+       style="fill:#bac7d6;fill-opacity:1;stroke-width:0.128438"
+       transform="rotate(-45)" />
+    <circle
+       id="XMLID_1563_-1-9"
+       fill="url(#XMLID_54_)"
+       cx="-193.38332"
+       cy="221.27078"
+       r="1.5027276"
+       style="fill:#bac7d6;fill-opacity:1;stroke-width:0.128438"
+       transform="rotate(-45)" />
   </g>
 </svg>

@@ -1,4 +1,5 @@
 // *_Nav constants are the nav menu links
+const home = document.querySelector("#H4__logo");
 const about_Nav = document.querySelector(".nav-About");
 const resume_Nav = document.querySelector(".nav-Resume");
 const portfolio_Nav = document.querySelector(".nav-Portfolio");
@@ -30,6 +31,12 @@ const manager = {
 };
 
 let click = "no";
+
+home.addEventListener("click", () => {
+  about_Window.classList.add("off");
+  resume_Window.classList.add("off");
+  portfolio_Window.classList.add("off");
+});
 
 // * about_Nav show about_Window on click by removing the off class
 // * about_Nav (resume_Window, portfolio_Window) on click disable other active windows by adding the off class
@@ -89,22 +96,22 @@ portfolio_Nav.addEventListener("click", function () {
   about_Window.classList.add("off");
   resume_Window.classList.add("off");
   shapeManager("portfolio_off");
-  spread("square_off");
+  spread("square_anim-off");
   clickCheck("portfolio_Window");
 });
 
 portfolio_Nav.onmouseover = function () {
   if (click !== "yes") {
     shapeManager("portfolio");
-    spread("square_on");
+    spread("square_anim");
   } else {
     shapeManager("portfolio_off");
-    spread("square_off");
+    spread("square_anim-off");
   }
 };
 portfolio_Nav.onmouseout = function () {
   shapeManager("portfolio_off");
-  spread("square_off");
+  spread("square_anim-off");
 };
 
 function clickCheck(parameter) {
@@ -159,7 +166,7 @@ function shapeManager(param) {
 function spread(param) {
   switch (param) {
     case "about_anim":
-      text_Color("#f1a403");
+      text_Color("100%");
       hello.style.transform = "translate(-50%,-3em)";
       iam.style.transform = "translateX(-3em)";
       name.style.transform = "translateX(3em)";
@@ -168,7 +175,7 @@ function spread(param) {
       break;
 
     case "about_anim-off":
-      text_Color("#142142");
+      text_Color("0%");
       hello.style.transform = "translate(-50%,0)";
       iam.style.transform = "translateX(50%)";
       name.style.transform = "translateX(0)";
@@ -177,7 +184,7 @@ function spread(param) {
       break;
 
     case "triangle_anim":
-      text_Color("#f1a403");
+      text_Color("100%");
       iam.style.transform = "translate(50%,-3em)";
       front.style.transform = "translate(-.5em,7em)";
       dev.style.transform = "translate(.5em,7em)";
@@ -186,7 +193,7 @@ function spread(param) {
       break;
 
     case "triangle_anim-off":
-      text_Color("#142142");
+      text_Color("0%");
       iam.style.transform = "translate(50%,0)";
       front.style.transform = "translate(0,0)";
       dev.style.transform = "translate(0,0)";
@@ -194,8 +201,8 @@ function spread(param) {
       name.classList.remove("off");
       break;
 
-    case "square_on":
-      text_Color("#f1a403");
+    case "square_anim":
+      text_Color("100%");
       name.style.transform = "translate(-50%,3.5em)";
       front.style.transform = "translate(-25%,-5em)";
       dev.style.transform = "translate(25%,-5em)";
@@ -203,8 +210,8 @@ function spread(param) {
       hello.classList.add("off");
       break;
 
-    case "square_off":
-      text_Color("#142142");
+    case "square_anim-off":
+      text_Color("0%");
       name.style.transform = "translate(-50%,0)";
       front.style.transform = "translate(0,0)";
       dev.style.transform = "translate(0,0)";
@@ -217,6 +224,6 @@ function spread(param) {
 
 function text_Color(param) {
   const all = document.querySelectorAll(".welcome__div > p");
-  all.forEach((element) => (element.style.color = `${param}`));
+  all.forEach((element) => (element.style.opacity = `${param}`));
   return 0;
 }

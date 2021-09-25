@@ -59,7 +59,7 @@
 .welcome {
   grid-area: 2/2 / 4/4;
   place-self: center;
-  color: #142142;
+  color: #f1a403;
   text-align: center;
 }
 .welcome__div {
@@ -70,6 +70,7 @@
   font-weight: bolder;
   letter-spacing: 2px;
   position: absolute;
+  opacity: 0%;
 }
 .welcome__txt--2em-font {
   font-size: 2em;
@@ -184,9 +185,12 @@
   padding: 3em 1em;
 }
 .portfolio__img {
-  width: 75%;
+  width: 85%;
   border: 0.5em solid darkgoldenrod;
   border-radius: 2em;
+}
+.portfolio__img:hover {
+  filter: brightness(0.7);
 }
 /*********** FOOTER  *********/
 
@@ -229,9 +233,10 @@
   place-self: end;
   justify-self: end;
   justify-self: center;
+  padding: 0 0 0.5em 0;
 }
 
-/* U T I L I T I E S */
+/*************** UTILITIES ****************/
 
 .grid {
   display: grid;
@@ -257,7 +262,7 @@
   z-index: 1;
 }
 .animate {
-  transition: transform 0.3s ease-out 0.1s, color 0.1s 0.2s;
+  transition: transform 0.3s ease-out 0.1s, opacity 0.1s 0.2s;
 }
 
 .logo {
@@ -275,6 +280,11 @@
   grid-area: 1/2 / 6/4;
   width: 28%;
   place-self: end;
+}
+.background--circle {
+  grid-area: 1/2 / 6/4;
+  place-self: center;
+  height: 20%;
 }
 .left_50 {
   left: 50%;
