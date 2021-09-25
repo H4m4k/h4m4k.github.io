@@ -1,190 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-	<meta charset="utf-8">
+    <title>Paweł Janik - FrontEnd developer</title>
 
-	<title>Paweł Janik - FrontEnd developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet"> 
-  
-  <link rel="icon" href="/img/favicon.png">
-	<link rel="stylesheet" href="css/style.css">
-  <script src="https://kit.fontawesome.com/a28ed5be3d.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/a28ed5be3d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-
-<body class="grid body">
-  
-  
-  <svg
-   xmlns="http://www.w3.org/2000/svg"
-   width="20mm"
-   height="39.875mm"
-   version="1.1"
-   viewBox="0 0 20 41"
-   class="logo">
-  <g id='H4__logo' transform="translate(-84.074 -112.42)">
-    <a href="#">
-      <path
-      transform="scale(.26458)"
-      d="m317.76 424.89v79.117l62.362-2e-3v71.594h13.228v-83.008h-62.362v-67.701zm62.362 0v56.692l13.228 1e-3v-56.693zm-62.362 90.708v60.001h13.228v-60.001z"
-      fill="#f1a403"
-      stroke-width="1"
-      stroke="#142142"
-      style="paint-order:fill markers stroke"
-      />
-    </a>   
-  </g>
-</svg>
-
-   <div class="shapes circle ">
-     <svg 
-     class="off"
-     viewBox="-5 0 110   110"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
-     <defs >
-       <clipPath id="clip_Circle">
-         <circle  cx="50" cy="50" r="47" fill="none"></circle>
-        </clipPath>
-      </defs>
-      <image 
-      xlink:href="img/Avatar_Large.jpg" 
-      width="100%" 
-      height="100%" 
-      x="-10" 
-      y="-5" 
-      clip-path="url(#clip_Circle)" />
-      <circle  class="about_Path" cx="50" cy="50" r="47" fill="none" stroke-width="3"></circle>
-      <path id="my_path" d="m 8 66 c 15 36 72 34 84 0" fill="transparent" />
-      <text x="50" y="90" font-size="10" font-weight="bold" text-anchor="middle" fill="#99ACC2" stroke="#142142" stroke-width="0.4"><textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">About Me
-      </textPath></text>
+  <body class="grid body">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20mm"
+      height="39.875mm"
+      version="1.1"
+      viewBox="0 0 20 41"
+      class="logo"
+    >
+      <g id="H4__logo" transform="translate(-84.074 -112.42)">
+        <a href="#">
+          <path
+            transform="scale(.26458)"
+            d="m317.76 424.89v79.117l62.362-2e-3v71.594h13.228v-83.008h-62.362v-67.701zm62.362 0v56.692l13.228 1e-3v-56.693zm-62.362 90.708v60.001h13.228v-60.001z"
+            fill="#f1a403"
+            stroke-width="1"
+            stroke="#142142"
+            style="paint-order: fill markers stroke"
+          />
+        </a>
+      </g>
     </svg>
-  </div> 
 
-   <div class="shapes triangle">
-     <svg 
-     class="off"
-     viewBox="-5 0 110   110"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
-     <defs>
-       <clipPath id="clip_Triangle">
-        <polygon points="50,5 0,100 100,100" fill="#fff"/>
-       </clipPath>
-      </defs>
-     <image 
-     xlink:href="/img/hourglass.jpg" 
-     height="150%" 
-     width="150%" 
-     x='-59' y='-20' 
-     clip-path="url(#clip_Triangle)" 
-     class="triangle__img--sharpen"/>
-     <polygon 
-     class="resume_Path" 
-     points="50,5 0,100 100,100" 
-     fill="none" 
-     stroke-width="3"/>
-     <text x="50" y="90" font-size="10" font-weight="bold" text-anchor="middle" fill="#782323" stroke="#F1A403" stroke-width="0.2">Resume</text>
-    </svg>
-  </div> 
-
-   <div class="shapes square">
-     <svg 
-     class="off"
-     viewBox="-5 -5 110   110"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
-     <defs>
-       <clipPath id="clip_Square">
-        <rect width="100" height="100" fill="none"></rect>
-       </clipPath>
-     </defs>
-     <image class='square__img--invert' xlink:href="/img/resume.jpg" width="150%" height="150%" x='-35' y='-25' clip-path="url(#clip_Square)"></image>
-      <rect class="portfolio_Path" width="100" height="100" fill="none" stroke="#333745" stroke-width="3"></rect>
-      <text x="50" y="90" font-size="10" font-weight="bold" text-anchor="middle" fill="#97CC04" stroke="#142142" stroke-width="0.5">Portfolio</text>
-    </svg>
-  </div> 
-
-
-
-
-
-
-<header class="welcome">
-  <div class="welcome__div">
-    <p class="welcome__txt animate hello left_50">Hello </p>
-    <p class="welcome__txt animate iam">I am</p>
-    <p class="welcome__txt animate name left_50">Paweł</p>
-    <p class="welcome__txt--2em-font animate front ">FrontEnd</p>
-    <p class="welcome__txt--2em-font animate dev ">Developer</p>
-  </div>
-</header>
-
-
-
-
-
-
-
-<div class="roadmap-background"></div>
-
-<nav class="roadmap">
-  <a class="roadmap__Link roadmap__Link--about nav-About" href="" >About Me</a>
-  <a class="roadmap__Link roadmap__Link--resume nav-Resume" href="" >Resume</a>
-  <a class="roadmap__Link roadmap__Link--portfolio nav-Portfolio" href="" >Portfolio</a>
-</nav>
-
-
-
-
-
-<div class="about off">
-  <section class="about__wrapper about__wrapper--border">
-    <h2 class="about__Headline about--color">About me</h2>
-    <p class="about__Paragraph about--color">
-      Paweł Janik is a self-taught programmer, with experience in solving problems and building websites for customers. His background in web development is based on many years of computer literacy and problem-solving.<br>
-      Paweł is fueled by his passion for building quality websites. His drive to learn new technologies and building work algorithms has been the fuel of his growth up to this day.<br>
-      Hunger for knowledge and determination to learn has led him to his most recent success, a Portfolio website. The site has been designed according to the latest flat-design trends and was the most demanding project to date. <br>
-      The portfolio project was a success because the experience built by creating website projects available at www.frontendmentor.io has led to developing proper habits and skills such as planning work, diligence, never give up mentality, solution mining, language, and technology fluency.<br>
-      Currently, Paweł is working as a head of the sales team but is looking to become hired as a Web Developer. Reach him out to <a href="mailto:pawel.janik.1983@gmail.com">pawel.janik.1983@gmail.com</a> to get in touch!
-    </p>
-    <figure class="about__figure">
-      <img class="about__img" src="/img/Avatar2_Small.jpg" alt="Photo of a middle age guy with mustache and beard, smiling." >
-    </figure>
-  </section>
-</div>
-
-
-
-<embed class="pdf_Resume resume off" src="/other/CV.pdf" type="application/pdf" width="70%" height="70%" title="Paweł Janik Resume" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
-
-
-
-<div class="portfolio">
-  <a href="http://www.regeo.pl" target="_blank"><img src="/img/regeo.jpg" alt=""></a>
-  <a href="https://janex.vercel.app/index.html" target="_blank"><img src="/img/janex.jpg" alt=""></a>
-  <a href=""><img src="" alt=""></a>
-</div>
- 
-
-
-  <footer class="footer">
-    <div class="footer__div">
-      <a class="footer__Link" href="mailto:pawel.janik.1983@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a class="footer__Link" href="https://www.linkedin.com/in/pawel--janik/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a class="footer__Link" href="https://github.com/H4m4k" target="_blank"><i class="fab fa-github"></i></a>
+    <div class="shapes circle">
+      <svg
+        class="off"
+        viewBox="-5 0 110   110"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <defs>
+          <clipPath id="clip_Circle">
+            <circle cx="50" cy="50" r="47" fill="none"></circle>
+          </clipPath>
+        </defs>
+        <image
+          xlink:href="img/Avatar_Large.jpg"
+          width="100%"
+          height="100%"
+          x="-10"
+          y="-5"
+          clip-path="url(#clip_Circle)"
+        />
+        <circle
+          class="about_Path"
+          cx="50"
+          cy="50"
+          r="47"
+          fill="none"
+          stroke-width="3"
+        ></circle>
+        <path id="my_path" d="m 8 66 c 15 36 72 34 84 0" fill="transparent" />
+        <text
+          x="50"
+          y="90"
+          font-size="10"
+          font-weight="bold"
+          text-anchor="middle"
+          fill="#99ACC2"
+          stroke="#142142"
+          stroke-width="0.4"
+        >
+          <textPath
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="#my_path"
+          >
+            About Me
+          </textPath>
+        </text>
+      </svg>
     </div>
-    <p class="footer__Text footer__paragraph--padding-right">Copyright &copy; 2021 Paweł Janik MMX.</p>
-  </footer>
 
-  <img src="/img/technology.svg" class="skills" alt="Logo that looks like an H">
-  <img src="/img/circuit_board_H4m4k.svg" class="background" alt="">
-  <img src="/img/cicruict_board_small.svg" class="background--small" alt="">
+    <div class="shapes triangle">
+      <svg
+        class="off"
+        viewBox="-5 0 110   110"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <defs>
+          <clipPath id="clip_Triangle">
+            <polygon points="50,5 0,100 100,100" fill="#fff" />
+          </clipPath>
+        </defs>
+        <image
+          xlink:href="/img/hourglass.jpg"
+          height="150%"
+          width="150%"
+          x="-59"
+          y="-20"
+          clip-path="url(#clip_Triangle)"
+          class="triangle__img--sharpen"
+        />
+        <polygon
+          class="resume_Path"
+          points="50,5 0,100 100,100"
+          fill="none"
+          stroke-width="3"
+        />
+        <text
+          x="50"
+          y="90"
+          font-size="10"
+          font-weight="bold"
+          text-anchor="middle"
+          fill="#782323"
+          stroke="#F1A403"
+          stroke-width="0.2"
+        >
+          Resume
+        </text>
+      </svg>
+    </div>
 
-  <script src="JS/script.js"></script>
-</body>
+    <div class="shapes square">
+      <svg
+        class="off"
+        viewBox="-5 -5 110   110"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <defs>
+          <clipPath id="clip_Square">
+            <rect width="100" height="100" fill="none"></rect>
+          </clipPath>
+        </defs>
+        <image
+          class="square__img--invert"
+          xlink:href="/img/resume.jpg"
+          width="150%"
+          height="150%"
+          x="-35"
+          y="-25"
+          clip-path="url(#clip_Square)"
+        ></image>
+        <rect
+          class="portfolio_Path"
+          width="100"
+          height="100"
+          fill="none"
+          stroke="#333745"
+          stroke-width="3"
+        ></rect>
+        <text
+          x="50"
+          y="90"
+          font-size="10"
+          font-weight="bold"
+          text-anchor="middle"
+          fill="#97CC04"
+          stroke="#142142"
+          stroke-width="0.5"
+        >
+          Portfolio
+        </text>
+      </svg>
+    </div>
+
+    <header class="welcome">
+      <div class="welcome__div">
+        <p class="welcome__txt animate hello left_50">Hello</p>
+        <p class="welcome__txt animate iam">I am</p>
+        <p class="welcome__txt animate name left_50">Paweł</p>
+        <p class="welcome__txt--2em-font animate front">FrontEnd</p>
+        <p class="welcome__txt--2em-font animate dev">Developer</p>
+      </div>
+    </header>
+
+    <div class="roadmap-background"></div>
+
+    <nav class="roadmap">
+      <a class="roadmap__Link roadmap__Link--about nav-About" href=""
+        >About Me</a
+      >
+      <a class="roadmap__Link roadmap__Link--resume nav-Resume" href=""
+        >Resume</a
+      >
+      <a class="roadmap__Link roadmap__Link--portfolio nav-Portfolio" href=""
+        >Portfolio</a
+      >
+    </nav>
+
+    <div class="about off">
+      <section class="about__wrapper about__wrapper--border">
+        <h2 class="about__Headline about--color">About me</h2>
+        <p class="about__Paragraph about--color">
+          Paweł Janik is a self-taught programmer, with experience in solving
+          problems and building websites for customers. His background in web
+          development is based on many years of computer literacy and
+          problem-solving.<br />
+          Paweł is fueled by his passion for building quality websites. His
+          drive to learn new technologies and building work algorithms has been
+          the fuel of his growth up to this day.<br />
+          Hunger for knowledge and determination to learn has led him to his
+          most recent success, a Portfolio website. The site has been designed
+          according to the latest flat-design trends and was the most demanding
+          project to date. <br />
+          The portfolio project was a success because the experience built by
+          creating website projects available at www.frontendmentor.io has led
+          to developing proper habits and skills such as planning work,
+          diligence, never give up mentality, solution mining, language, and
+          technology fluency.<br />
+          Currently, Paweł is working as a head of the sales team but is looking
+          to become hired as a Web Developer. Reach him out to
+          <a href="mailto:pawel.janik.1983@gmail.com"
+            >pawel.janik.1983@gmail.com</a
+          >
+          to get in touch!
+        </p>
+        <figure class="about__figure">
+          <img
+            class="about__img"
+            src="/img/Avatar2_Small.jpg"
+            alt="Photo of a middle age guy with mustache and beard, smiling."
+          />
+        </figure>
+      </section>
+    </div>
+
+    <embed
+      class="pdf_Resume resume off"
+      src="/other/CV.pdf"
+      type="application/pdf"
+      width="70%"
+      height="70%"
+      title="Paweł Janik Resume"
+      pluginspage="http://www.adobe.com/products/acrobat/readstep2.html"
+    />
+
+    <div class="portfolio off">
+      <a href="http://www.regeo.pl" target="_blank"
+        ><img src="/img/regeo.jpg" alt=""
+      /></a>
+      <a href="https://janex.vercel.app/index.html" target="_blank"
+        ><img src="/img/janex.jpg" alt=""
+      /></a>
+      <a href=""><img src="" alt="" /></a>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__div">
+        <a class="footer__Link" href="mailto:pawel.janik.1983@gmail.com"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a
+          class="footer__Link"
+          href="https://www.linkedin.com/in/pawel--janik/"
+          target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a class="footer__Link" href="https://github.com/H4m4k" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+      </div>
+      <p class="footer__Text footer__paragraph--padding-right">
+        Copyright &copy; 2021 Paweł Janik MMX.
+      </p>
+    </footer>
+
+    <img
+      src="/img/technology.svg"
+      class="skills"
+      alt="Logo that looks like an H"
+    />
+    <img src="/img/circuit_board_H4m4k.svg" class="background" alt="" />
+    <img src="/img/cicruict_board_small.svg" class="background--small" alt="" />
+
+    <script src="JS/script.js"></script>
+  </body>
 </html>

@@ -1,300 +1,265 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .body {
-    background-color: #142142;
-    grid-template: 1fr repeat( 3,.25fr) 1fr .15fr / .3fr 1fr 1fr;
-    min-height: 100vh;
-    font-family: 'Play', sans-serif;
-    
+  background-color: #142142;
+  grid-template: 1fr repeat(3, 0.25fr) 1fr 0.15fr / 0.3fr 1fr 1fr;
+  min-height: 100vh;
+  font-family: "Play", sans-serif;
 }
-.shapes{
-    grid-area: 1/2 / 6/4;
+.shapes {
+  grid-area: 1/2 / 6/4;
 }
-
- 
 
 /***********  NAVIGATION MENU - SIDEBAR  *********/
 
-
 .roadmap {
-    grid-area: 2/1 / 5/2;
-    
-    display: grid;
-    grid-template: repeat(3,1fr) / 1fr;
-    width: 100%;
-    
-    font-size: 1.4em;
-    font-weight: bolder;
-    
-    place-items: end;
-    justify-items: center;
-    
-    color: #142142;
+  grid-area: 2/1 / 5/2;
+
+  display: grid;
+  grid-template: repeat(3, 1fr) / 1fr;
+  width: 100%;
+
+  font-size: 1.4em;
+  font-weight: bolder;
+
+  place-items: end;
+  justify-items: center;
+
+  color: #142142;
 }
 .roadmap__Link {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    transition: scale .4s, color .4s;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: scale 0.4s, color 0.4s;
 }
-.roadmap__Link--about:hover{
-    color: #6683A3;
-    scale: 1.2;    
+.roadmap__Link--about:hover {
+  color: #6683a3;
+  scale: 1.2;
 }
-.roadmap__Link--resume:hover{
-    color: #782323;
-    scale: 1.2;
+.roadmap__Link--resume:hover {
+  color: #782323;
+  scale: 1.2;
 }
-.roadmap__Link--portfolio:hover{
-    color: #97CC04;
-    scale: 1.2;
+.roadmap__Link--portfolio:hover {
+  color: #97cc04;
+  scale: 1.2;
 }
 .roadmap-background {
-    grid-area: 1/1 / 7/2;
-    background-color: #bac7d6;
+  grid-area: 1/1 / 7/2;
+  background-color: #bac7d6;
 }
-
-
 
 /***********  ANIMATIONS  *********/
 
-
 .welcome {
-    grid-area: 2/2 / 4/4;
-    place-self: center;
-    color: #142142;
-    text-align: center;
+  grid-area: 2/2 / 4/4;
+  place-self: center;
+  color: #142142;
+  text-align: center;
 }
 .welcome__div {
-    position: relative;
+  position: relative;
 }
 .welcome__txt {
-    font-size: 4em;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    position: absolute;
+  font-size: 4em;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  position: absolute;
 }
 .welcome__txt--2em-font {
-    font-size: 2em;
-    font-style: italic;
-    margin: .5em 0 0 0;
+  font-size: 2em;
+  font-style: italic;
+  margin: 0.5em 0 0 0;
 }
 .welcome__txt--2em-font.front,
 .welcome__txt--2em-font.dev {
-    display: inline-block;
+  display: inline-block;
 }
 
-.triangle__img--sharpen { /* chrome blurrs images when downsizing  */
-    image-rendering: -webkit-optimize-contrast;
+.triangle__img--sharpen {
+  /* chrome blurrs images when downsizing  */
+  image-rendering: -webkit-optimize-contrast;
 }
 
-.square__img--invert {  
-    filter: brightness(40%) sepia(100%);
+.square__img--invert {
+  filter: brightness(40%) sepia(100%);
 }
-
-
-
-
-
-
-
-
 
 /*********** NAVIGATION -- ABOUT ME *********/
 
-
 .about-Me {
-    grid-area: 1/2 / 7/4;
-    place-self: center;
-    padding: 2em;
-    color: white;
-    display: flex;
-    flex-direction: column;
+  grid-area: 1/2 / 7/4;
+  place-self: center;
+  padding: 2em;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 .about-Me > p {
-    place-self: center;
+  place-self: center;
 }
-
-
-
-
 
 /*********** NAVIGATION -- RESUME  *********/
 
 .pdf_Resume {
-    grid-area: 1/2 / 6/4;
-    place-self: center;
+  grid-area: 1/2 / 6/4;
+  place-self: center;
 }
-
-
-
-
 
 /*********** NAVIGATION -- PORTFOLIO  *********/
 .portfolio {
-    grid-area: 1/2 /6/4;
-    background: aliceblue;
-    display: flex;
-    place-items: center;
-    justify-content: center;
+  grid-area: 1/2 /6/4;
+  background: aliceblue;
+  display: flex;
+  place-items: center;
+  justify-content: center;
 
-    width: 70%;
-    height: 70%;
-    place-self: center;
+  width: 70%;
+  height: 70%;
+  place-self: center;
 }
-
-
 
 /*********** FOOTER  *********/
 
 .footer {
-    grid-area: 6/2 / 7/4;
-    background-color: #F1A403;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  grid-area: 6/2 / 7/4;
+  background-color: #f1a403;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .footer__Text,
 .footer__Link {
-    color: #142142;
-    padding: 0 0 0 2em;
+  color: #142142;
+  padding: 0 0 0 2em;
 }
 .footer__paragraph--padding-right {
-    padding: 0 2em 0 0;
+  padding: 0 2em 0 0;
 }
-.footer__Link{
-    font-weight: bolder;
-    text-decoration: none;
+.footer__Link {
+  font-weight: bolder;
+  text-decoration: none;
 }
 .footer__Link:hover {
-    text-decoration: overline underline;
-    color: #F1A403;
+  text-decoration: overline underline;
+  color: #f1a403;
 }
 .fab,
 .fas {
-    padding: .25em .3em;
-    border-radius: 20%;
+  padding: 0.25em 0.3em;
+  border-radius: 20%;
 }
 .fab:hover,
 .fas:hover {
-    background-color: #142142;
+  background-color: #142142;
 }
 
 .skills {
-    grid-area: 6/1/7/2;
-    width: 40%;
-    place-self: end;
-    justify-self: end;
-    justify-self: center;
+  grid-area: 6/1/7/2;
+  width: 40%;
+  place-self: end;
+  justify-self: end;
+  justify-self: center;
 }
-
-
-
-
-
 
 /* U T I L I T I E S */
 
 .grid {
-    display: grid;
+  display: grid;
 }
 .center {
-    place-self: center;
-    justify-self: start;
+  place-self: center;
+  justify-self: start;
 }
 .main_Font {
-    font-size: 1.563em;
+  font-size: 1.563em;
 }
 .off {
-    display: none;
+  display: none;
 }
 .triangle,
 .circle,
 .square {
-    width: 20%;
-    place-self: center;
+  width: 20%;
+  place-self: center;
 }
 .on_Top {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 .animate {
-    transition: transform .3s ease-out .1s , 
-    color .1s .2s;
+  transition: transform 0.3s ease-out 0.1s, color 0.1s 0.2s;
 }
 
 .logo {
-    grid-area: 1/1/2/2;
-    position: relative;
-    place-self: center;
+  grid-area: 1/1/2/2;
+  position: relative;
+  place-self: center;
 }
 .background {
-    grid-area: 1/2 / 6/4;
-    width: 30%;
-    place-self: start;
-    transform: scale(-1);
+  grid-area: 1/2 / 6/4;
+  width: 30%;
+  place-self: start;
+  transform: scale(-1);
 }
 .background--small {
-    grid-area: 1/2 / 6/4;
-    width: 28%;
-    place-self: end;
+  grid-area: 1/2 / 6/4;
+  width: 28%;
+  place-self: end;
 }
 .left_50 {
-    left: 50%;
+  left: 50%;
 }
-
 
 /* NAVIGATION -- ABOUT   */
 
-
 .about {
-    grid-area: 1/2 /6/4;
-    position: relative;
-    place-self: center;
-    width: 70%;
-    height: 80%;
+  grid-area: 1/2 /6/4;
+  position: relative;
+  place-self: center;
+  width: 70%;
+  height: 80%;
 }
 .about__wrapper {
-    background-color: #6683a3ff;
-    border-radius: 15em;
-    height: 100%;
-    width: 100%;
+  background-color: #6683a3ff;
+  border-radius: 15em;
+  height: 100%;
+  width: 100%;
 
-    display: grid;
-    grid-template: .2fr .3fr 1fr .3fr / .1fr 1fr .2fr;
+  display: grid;
+  grid-template: 0.2fr 0.3fr 1fr 0.3fr / 0.1fr 1fr 0.2fr;
 }
 .about__wrapper--border {
-    border: 1em solid darkgoldenrod;
+  border: 1em solid darkgoldenrod;
 }
 .about__Headline {
-    grid-area: 2/2 /3/3;
-    font-size: xx-large;
-    align-self: end;
-    padding: .5em 1em 1.5em 1em;
+  grid-area: 2/2 /3/3;
+  font-size: xx-large;
+  align-self: end;
+  padding: 0.5em 1em 1.5em 1em;
 }
 .about--color {
-    color: #142142;
+  color: #142142;
 }
 .about__Paragraph {
-    grid-area: 3/2 / 4/3;
-    min-height: 100%;
-    font-size: 1.2em;
-    line-height: 1.2;
-    padding: 1em;
+  grid-area: 3/2 / 4/3;
+  min-height: 100%;
+  font-size: 1.2em;
+  line-height: 1.2;
+  padding: 1em;
 }
 .about__figure {
-    position: absolute;
-    top: -8%;
-    right: -20%;
+  position: absolute;
+  top: -8%;
+  right: -20%;
 }
 .about__img {
-    border-radius: 50%;
-    width: 60%;
-    border: 1em solid darkgoldenrod;
+  border-radius: 50%;
+  width: 60%;
+  border: 1em solid darkgoldenrod;
 }
-  
-
