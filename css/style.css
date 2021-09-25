@@ -111,19 +111,83 @@
   place-self: center;
 }
 
+/**************** NAVIGATION -- ABOUT ***************/
+
+.about {
+  grid-area: 1/2 /6/4;
+  position: relative;
+  place-self: center;
+  width: 70%;
+  height: 80%;
+}
+.about__wrapper {
+  background-color: #6683a3ff;
+  border-radius: 10em;
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  grid-template: 0.2fr 0.3fr 1fr 0.3fr / 0.1fr 1fr 0.2fr;
+}
+.about__wrapper--border {
+  border: 1em solid darkgoldenrod;
+}
+.about__Headline {
+  grid-area: 2/2 /3/3;
+  font-size: xx-large;
+  align-self: end;
+  padding: 0.5em 1em 1.5em 1em;
+}
+.about--color {
+  color: #142142;
+}
+.about__Paragraph {
+  grid-area: 3/2 / 4/3;
+  min-height: 100%;
+  font-size: 1.2em;
+  line-height: 1.2;
+  padding: 1em;
+}
+.about__figure {
+  position: absolute;
+  top: -8%;
+  right: -20%;
+}
+.about__img {
+  border-radius: 50%;
+  width: 60%;
+  border: 1em solid darkgoldenrod;
+}
+
 /*********** NAVIGATION -- PORTFOLIO  *********/
+
 .portfolio {
   grid-area: 1/2 /6/4;
-  background: aliceblue;
   display: flex;
-  place-items: center;
+  place-items: start;
   justify-content: center;
 
   width: 70%;
   height: 70%;
   place-self: center;
 }
-
+.portfolio--style {
+  background-color: #6683a3ff;
+  border-radius: 10em;
+}
+.portfolio--border {
+  border: 1em solid darkgoldenrod;
+}
+.portfolio__link {
+  display: flex;
+  place-content: center;
+  padding: 3em 1em;
+}
+.portfolio__img {
+  width: 75%;
+  border: 0.5em solid darkgoldenrod;
+  border-radius: 2em;
+}
 /*********** FOOTER  *********/
 
 .footer {
@@ -214,52 +278,4 @@
 }
 .left_50 {
   left: 50%;
-}
-
-/* NAVIGATION -- ABOUT   */
-
-.about {
-  grid-area: 1/2 /6/4;
-  position: relative;
-  place-self: center;
-  width: 70%;
-  height: 80%;
-}
-.about__wrapper {
-  background-color: #6683a3ff;
-  border-radius: 15em;
-  height: 100%;
-  width: 100%;
-
-  display: grid;
-  grid-template: 0.2fr 0.3fr 1fr 0.3fr / 0.1fr 1fr 0.2fr;
-}
-.about__wrapper--border {
-  border: 1em solid darkgoldenrod;
-}
-.about__Headline {
-  grid-area: 2/2 /3/3;
-  font-size: xx-large;
-  align-self: end;
-  padding: 0.5em 1em 1.5em 1em;
-}
-.about--color {
-  color: #142142;
-}
-.about__Paragraph {
-  grid-area: 3/2 / 4/3;
-  min-height: 100%;
-  font-size: 1.2em;
-  line-height: 1.2;
-  padding: 1em;
-}
-.about__figure {
-  position: absolute;
-  top: -8%;
-  right: -20%;
-}
-.about__img {
-  border-radius: 50%;
-  width: 60%;
-  border: 1em solid darkgoldenrod;
 }
