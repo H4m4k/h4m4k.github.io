@@ -166,14 +166,14 @@
 
 .portfolio {
   grid-area: 1/2 /6/4;
-  display: flex;
-  place-items: start;
+  display: grid;
+  grid-template: repeat(2,1fr) / repeat(2,1fr);
+  place-items: center;
   justify-content: center;
 
   width: 70%;
   height: 70%;
   place-self: center;
-  flex-wrap: wrap;
 }
 .portfolio--style {
   background-color: #6683a3ff;

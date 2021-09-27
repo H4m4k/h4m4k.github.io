@@ -22,21 +22,21 @@ const name = document.querySelector(".name");
 const front = document.querySelector(".front");
 const dev = document.querySelector(".dev");
 
+const go_Home = document.querySelector("#go_Home");
+
 const manager = {
   about: about_Path,
   resume: resume_Path,
   portfolio: portfolio_Path,
   about_Window: about_Window,
   resume_Window: resume_Window,
+  portfolio_Window: portfolio_Window,
 };
 
 let click = "no";
 
-h_logo.addEventListener("click", function home() {
-  about_Window.classList.add("off");
-  resume_Window.classList.add("off");
-  portfolio_Window.classList.add("off");
-});
+h_logo.addEventListener("click", home);
+go_Home.addEventListener("click", home);
 
 // * about_Nav show about_Window on click by removing the off class
 // * about_Nav (resume_Window, portfolio_Window) on click disable other active windows by adding the off class
@@ -203,9 +203,9 @@ function spread(param) {
 
     case "square_anim":
       text_Color("100%");
-      name.style.transform = "translate(-50%,3.5em)";
-      front.style.transform = "translate(-25%,-5em)";
-      dev.style.transform = "translate(25%,-5em)";
+      name.style.transform = "translate(-50%,4em)";
+      front.style.transform = "translate(-25%,-5.5em)";
+      dev.style.transform = "translate(25%,-5.5em)";
       iam.classList.add("off");
       hello.classList.add("off");
       break;
@@ -226,4 +226,10 @@ function text_Color(param) {
   const all = document.querySelectorAll(".welcome__div > p");
   all.forEach((element) => (element.style.opacity = `${param}`));
   return 0;
+}
+
+function home() {
+  about_Window.classList.add("off");
+  resume_Window.classList.add("off");
+  portfolio_Window.classList.add("off");
 }
