@@ -128,27 +128,28 @@
   height: 100%;
   width: 100%;
 
-  display: grid;
-  grid-template: 0.2fr 0.3fr 1fr 0.3fr / 0.1fr 1fr 0.2fr;
+  display: flex;
+  flex-direction: column;
+  place-content: start;
+  padding: 1em 2em;
 }
 .about__wrapper--border {
   border: 1em solid darkgoldenrod;
 }
 .about__Headline {
-  grid-area: 2/2 /3/3;
-  font-size: xx-large;
-  align-self: end;
-  padding: 0.5em 1em 1.5em 1em;
+  place-self: center;
+  font-size: 2.5em;
+  padding: 1em 0;
+  margin: .5em;
 }
 .about--color {
   color: #142142;
 }
 .about__Paragraph {
-  grid-area: 3/2 / 4/3;
-  min-height: 100%;
   font-size: 1.2em;
   line-height: 1.2;
-  padding: 1em;
+  padding: 0 2em;
+  margin: .5em;
 }
 .about__figure {
   position: absolute;
