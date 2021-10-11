@@ -325,8 +325,48 @@
     flex-shrink: 2;
     text-align: center;
   }
+  .shapes {
+    grid-area: 1/1 / 4/4;
+  }
+  .welcome,
   .logo {
     display: none;
+  }
+  .about {
+    grid-area: 2/1 /4/4;
+    position: relative;
+    place-self: center;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+  }
+  .about__wrapper {
+    background-color: #6683a3ff;
+    border-radius: 3em;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    place-content: start;
+    padding: 1em 2em;
+  }
+  .about__Paragraph {
+    font-size: 0.8em;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+  }
+  .about__Headline {
+    place-self: center;
+    font-size: 1.5em;
+    padding: 1em 0;
+    margin: 0.5em;
+  }
+  .about__img {
+    border-radius: 50%;
+    width: 34%;
+    border: 1em solid darkgoldenrod;
   }
   .footer {
     grid-area: 4/1 / 5/3;
@@ -342,14 +382,32 @@
     width: 40%;
     padding: 0;
   }
-  .footer__Link,
-  .footer__Text {
+  .footer__Link {
     padding: 0;
+    font-size: 0.8em;
+  }
+  .footer__Text {
+    font-size: 0.7em;
+  }
+  .footer__Text--absolute {
+    color: #f1a403;
+    bottom: 8%;
+    left: 25%;
+    position: absolute;
+    transform: translate(-50%);
   }
   .skills {
     display: none;
   }
   .mini-Font {
-    font-size: .5em;
+    font-size: 0.5em;
+  }
+  .background--circle {
+    grid-area: 2/1 / 4/3;
+  }
+  .background--small {
+    grid-area: 2/1 / 4/3;
+    width: 45%;
+    place-self: end;
   }
 }
