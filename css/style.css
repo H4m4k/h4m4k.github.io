@@ -167,20 +167,17 @@
 .portfolio {
   grid-area: 1/2 /6/4;
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  grid-template: auto/auto;
   place-items: center;
   justify-content: center;
 
   width: 70%;
-  height: 70%;
+  height: min-content;
   place-self: center;
 }
 .portfolio--style {
   background-color: #6683a3ff;
   border-radius: 10em;
-}
-.portfolio--border {
-  border: 1em solid darkgoldenrod;
 }
 .portfolio__link {
   display: flex;
@@ -326,7 +323,7 @@
     text-align: center;
   }
   .shapes {
-    grid-area: 1/1 / 4/4;
+    display: none;
   }
   .welcome,
   .logo {
@@ -337,8 +334,11 @@
     position: relative;
     place-self: center;
     width: 90%;
-    height: 90%;
+    height: min-content;
     z-index: 1;
+  }
+  .about__figure {
+    top: -4%;
   }
   .about__wrapper {
     background-color: #6683a3ff;
@@ -352,21 +352,39 @@
     padding: 1em 2em;
   }
   .about__Paragraph {
-    font-size: 0.8em;
+    font-size: 0.85em;
     line-height: 1.2;
     padding: 0;
     margin: 0;
   }
   .about__Headline {
-    place-self: center;
+    place-self: end;
     font-size: 1.5em;
     padding: 1em 0;
     margin: 0.5em;
   }
   .about__img {
     border-radius: 50%;
-    width: 34%;
+    width: 30%;
     border: 1em solid darkgoldenrod;
+  }
+  .about__wrapper--border {
+    border: 0.5em solid darkgoldenrod;
+  }
+  .pdf_Resume {
+    /* grid-area: 1/2 / 6/4; */
+    grid-area: 1/1 / 6/4;
+  }
+  .portfolio {
+    grid-area: 1/1 /4/3;
+    margin: 3em 0 0 0;
+  }
+  .portfolio--style {
+    border-radius: 2em;
+  }
+
+  .on_Top {
+    width: 90%;
   }
   .footer {
     grid-area: 4/1 / 5/3;
