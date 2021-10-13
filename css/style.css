@@ -376,13 +376,15 @@
     grid-area: 1/1 / 6/4;
   }
   .portfolio {
-    grid-area: 1/1 /4/3;
-    margin: 3em 0 0 0;
+    grid-area: 2/1 /4/3;
+    margin: 0.5em 0;
   }
   .portfolio--style {
     border-radius: 2em;
   }
-
+  .portfolio__link {
+    padding: 1em;
+  }
   .on_Top {
     width: 90%;
   }
